@@ -59,10 +59,9 @@ const benefits = [
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href="#top" aria-label="A.C.E Tailored home">
-          <span class="brand-name">A.C.E</span>
-          <span class="brand-rule"></span>
-          <span class="brand-sub">TAILORED</span>
-        </a>
+  <img class="brand-logo" src="/images/ace-tailored-logo.png" alt="A.C.E Tailored — Attract, Convert, Engage" width="1156" height="530" />
+</a>
+    
 
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="#included">What’s included</a>
@@ -91,7 +90,7 @@ const benefits = [
         <div class="hero-glow"></div>
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow light">ATTRACT <i></i> CONVERT <i></i> ENGAGE</p>
+            
             <h1>See what your business could look like online—<em>before you commit.</em></h1>
             <p class="hero-intro">
               We create and manage tailored websites for independent businesses. Request your complimentary
@@ -263,8 +262,9 @@ const benefits = [
     <footer>
       <div class="shell footer-inner">
         <a class="brand footer-brand" href="#top" aria-label="A.C.E Tailored home">
-          <span class="brand-name">A.C.E</span><span class="brand-rule"></span><span class="brand-sub">TAILORED</span>
-        </a>
+  <img class="brand-logo" src="/images/ace-tailored-logo.png" alt="A.C.E Tailored — Attract, Convert, Engage" width="1156" height="530" />
+</a>
+
         <p>We create and manage tailored websites for independent businesses.</p>
         <p class="footer-tag">ATTRACT <i></i> CONVERT <i></i> ENGAGE</p>
       </div>
@@ -321,13 +321,25 @@ const benefits = [
     color: white;
     border-bottom: 1px solid rgba(255,255,255,.13);
   }
-  .header-inner { min-height: 92px; display: flex; align-items: center; gap: 34px; }
-  .brand { display: inline-grid; grid-template-columns: auto 1px auto; align-items: center; gap: 12px; text-decoration: none; line-height: 1; }
-  .brand-name { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: 2rem; letter-spacing: .04em; }
-  .brand-rule { width: 1px; height: 32px; background: var(--copper-light); }
-  .brand-sub { font-size: .68rem; letter-spacing: .28em; font-weight: 600; }
+ .header-inner {
+  min-height: 92px;
+  padding-block: 8px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.brand-logo {
+  display: block;
+  width: 240px;
+  height: auto;
+}
+
+.footer-brand .brand-logo {
+  width: 240px;
+}
   .desktop-nav { margin-left: auto; display: flex; gap: 28px; align-items: center; }
-  .desktop-nav a { font-size: .76rem; letter-spacing: .08rem; text-decoration: none; text-transform: uppercase; font-weight: 600; opacity: .82; }
+  .desktop-nav a { font-size: .76rem; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; font-weight: 600; opacity: .82; }
   .desktop-nav a:hover { opacity: 1; color: var(--copper-light); }
   .button {
     display: inline-flex;
