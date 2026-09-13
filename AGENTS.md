@@ -32,7 +32,7 @@ Consult these guides before working on related tasks:
 - Locked spread price: £72.25 per month for the first 12 months, then £39 per month.
 - Locked upfront price: £399 upfront for website creation, plus £39 per month for hosting and management.
 - Never introduce £74.99 or the phrase “No setup fee”.
-- Approved primary CTA: “Get My Complimentary Website Concept”.
+- Approved primary CTA: “Get My Free Website Concept”.
 - The seven-working-day promise must state that all required information, content and access must first be received.
 - Keep layouts responsive and accessible.
 - Before editing, inspect the relevant files and current Git status.
