@@ -73,7 +73,7 @@ const benefits = [
           Get My Free Website Concept
         </a>
 
-        <a class="mobile-concept" href={conceptUrl}>Free Website Concept</a>
+        <a class="mobile-concept" href={conceptUrl}>Free Concept</a>
 
         <details class="mobile-menu">
           <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
@@ -161,7 +161,46 @@ const benefits = [
           </div>
 
           <div class="benefit-grid">
-            {benefits.map((benefit) => (
+            {benefits.slice(0, 3).map((benefit) => (
+              <article class="benefit-card">
+                <span class="benefit-number">{benefit.number}</span>
+                <div class="benefit-icon" aria-hidden="true"><span></span></div>
+                <h3>{benefit.title}</h3>
+                <p>{benefit.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <section class="concept-feature" aria-labelledby="concept-feature-title">
+            <div class="concept-feature-copy">
+              <p class="eyebrow light">YOUR COMPLIMENTARY CONCEPT</p>
+              <h2 id="concept-feature-title">See what your business could look like online.</h2>
+              <p>
+                Before you commit, A.C.E creates a tailored website concept shaped around your business, services and customers. It is free to request and carries no obligation—so you can see the direction before deciding whether to continue.
+              </p>
+              <a class="button" href={conceptUrl}>Get My Free Website Concept</a>
+              <span class="concept-feature-note">Created around your business, before you decide</span>
+            </div>
+
+            <div class="concept-preview" aria-label="Illustrative desktop and mobile website concept preview; no customer website is shown">
+              <div class="concept-preview-orbit"></div>
+              <div class="concept-desktop">
+                <div class="concept-browser-bar"><span></span><span></span><span></span></div>
+                <div class="concept-screen">
+                  <div class="concept-screen-nav"><b>YOUR<br />BUSINESS</b><i></i><i></i><i></i></div>
+                  <div class="concept-screen-hero"><small>TAILORED WEBSITE CONCEPT</small><strong>A thoughtful online presence,<br />shaped around you.</strong><em></em></div>
+                  <div class="concept-screen-cards"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="concept-phone">
+                <div class="concept-phone-screen"><b>YOUR<br />BUSINESS</b><small>CONCEPT PREVIEW</small><strong>Designed for<br />your customers.</strong><i></i></div>
+              </div>
+              <div class="concept-preview-label"><span aria-hidden="true">✦</span><small>COMPLIMENTARY</small><strong>Concept preview</strong></div>
+            </div>
+          </section>
+
+          <div class="benefit-grid benefit-grid-continued">
+            {benefits.slice(3).map((benefit) => (
               <article class="benefit-card">
                 <span class="benefit-number">{benefit.number}</span>
                 <div class="benefit-icon" aria-hidden="true"><span></span></div>
@@ -196,19 +235,6 @@ const benefits = [
             </div>
           </section>
 
-          <div class="concept-band">
-            <div class="concept-band-copy">
-              <p class="eyebrow light">YOUR COMPLIMENTARY CONCEPT</p>
-              <h2>See what your business could look like online.</h2>
-              <p>
-                We’ll create a tailored website concept for your business, free of charge and with no obligation—so you can see the direction before you decide.
-              </p>
-            </div>
-            <div class="concept-band-action">
-              <a class="button" href={conceptUrl}>Get My Free Website Concept</a>
-              <span>Tailored to your business</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -329,6 +355,7 @@ const benefits = [
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
+    overflow-x: clip;
     color: var(--ink);
     background: var(--cream);
     font-family: "Montserrat", system-ui, sans-serif;
@@ -356,13 +383,15 @@ const benefits = [
     color: white;
     border-bottom: 1px solid rgba(255,255,255,.13);
   }
- .header-inner {
+.header-inner {
   min-height: 92px;
   padding-block: 8px;
   display: flex;
   align-items: center;
   gap: 24px;
 }
+
+.brand { flex: 0 0 auto; }
 
 .brand-logo {
   display: block;
@@ -493,17 +522,41 @@ const benefits = [
   .booking-chip span { grid-row: span 2; display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; color: white; background: var(--copper); font-size: .78rem; }
   .booking-chip small { color: var(--muted); font: 700 .5rem/1.2 "Montserrat", sans-serif; letter-spacing: .1em; }
   .booking-chip strong { font: 600 .88rem/1.25 "Playfair Display", serif; }
-  .concept-band { position: relative; isolation: isolate; overflow: hidden; margin-top: clamp(48px, 6vw, 72px); padding: clamp(50px, 6vw, 78px); display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(275px, .82fr); align-items: center; gap: clamp(36px, 6vw, 92px); color: white; background: linear-gradient(125deg, var(--navy-dark), var(--navy-2)); box-shadow: var(--shadow); }
-  .concept-band::before, .concept-band::after { content: ""; position: absolute; z-index: -1; border: 1px solid rgba(217,148,109,.24); border-radius: 50%; }
-  .concept-band::before { width: 480px; height: 480px; right: -170px; top: -210px; }
-  .concept-band::after { width: 300px; height: 300px; right: 90px; bottom: -230px; }
-  .concept-band-copy { max-width: 650px; }
-  .concept-band h2 { color: white; font-size: clamp(2.5rem, 4.4vw, 4.5rem); margin-bottom: 22px; text-wrap: balance; }
-  .concept-band .eyebrow { margin-bottom: 14px; }
-  .concept-band-copy > p:last-child { max-width: 610px; margin-bottom: 0; color: rgba(255,255,255,.78); font-size: clamp(1rem, 1.4vw, 1.125rem); line-height: 1.8; }
-  .concept-band-action { display: grid; justify-items: start; gap: 14px; }
-  .concept-band-action .button { min-height: 62px; padding-inline: 30px; }
-  .concept-band-action span { color: var(--cream); font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+  .concept-feature { position: relative; isolation: isolate; overflow: hidden; width: 100vw; margin: clamp(48px, 6vw, 72px) calc(50% - 50vw); padding: clamp(64px, 8vw, 112px) max(20px, calc((100vw - 1160px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr) minmax(390px, .88fr); align-items: center; gap: clamp(48px, 7vw, 110px); color: white; background: linear-gradient(125deg, var(--navy-dark), var(--navy-2)); box-shadow: var(--shadow); }
+  .concept-feature::before, .concept-feature::after { content: ""; position: absolute; z-index: -1; border: 1px solid rgba(217,148,109,.22); border-radius: 50%; }
+  .concept-feature::before { width: 620px; height: 620px; left: -330px; top: -300px; }
+  .concept-feature::after { width: 520px; height: 520px; right: -270px; bottom: -310px; }
+  .concept-feature-copy { max-width: 650px; }
+  .concept-feature h2 { color: white; font-size: clamp(3rem, 5vw, 5.2rem); margin-bottom: 24px; text-wrap: balance; }
+  .concept-feature .eyebrow { margin-bottom: 16px; }
+  .concept-feature-copy > p { max-width: 610px; color: rgba(255,255,255,.82); font-size: clamp(1rem, 1.4vw, 1.125rem); line-height: 1.8; }
+  .concept-feature .button { min-height: 64px; margin-top: 10px; padding-inline: 30px; }
+  .concept-feature-note { display: block; margin-top: 16px; color: var(--cream); font-size: .76rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+  .concept-preview { position: relative; min-height: 440px; }
+  .concept-preview-orbit { position: absolute; width: 440px; height: 440px; right: -30px; top: 2px; border: 1px solid rgba(217,148,109,.34); border-radius: 50%; }
+  .concept-desktop { position: absolute; top: 24px; left: 0; width: min(100%, 490px); padding: 11px; background: #fdf8f0; box-shadow: 0 30px 65px rgba(0,0,0,.3); transform: rotate(-2deg); }
+  .concept-browser-bar { display: flex; gap: 5px; padding: 1px 0 10px; }
+  .concept-browser-bar span { width: 6px; height: 6px; border-radius: 50%; background: #c7d0d4; }
+  .concept-screen { overflow: hidden; background: #e6d3bd; }
+  .concept-screen-nav { height: 57px; display: flex; align-items: center; gap: 13px; padding: 0 24px; background: #fffdf9; color: var(--navy); }
+  .concept-screen-nav b, .concept-phone-screen b { margin-right: auto; font: 700 .55rem/1.05 "Montserrat", sans-serif; letter-spacing: .06em; }
+  .concept-screen-nav i { width: 34px; height: 4px; background: rgba(16,42,63,.32); }
+  .concept-screen-hero { height: 226px; padding: 40px 42px; background: linear-gradient(125deg, #e9d3bc, #dba27e); color: var(--navy); }
+  .concept-screen-hero small, .concept-phone-screen small { display: block; margin-bottom: 14px; color: #70432d; font: 700 .58rem/1.3 "Montserrat", sans-serif; letter-spacing: .12em; }
+  .concept-screen-hero strong { display: block; font: 600 clamp(1.4rem, 2.6vw, 2rem)/1.1 "Playfair Display", serif; }
+  .concept-screen-hero em, .concept-phone-screen i { display: block; width: 104px; height: 10px; margin-top: 24px; background: var(--navy); }
+  .concept-screen-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 20px; background: #fffdf9; }
+  .concept-screen-cards i { height: 50px; background: #e9e2d8; }
+  .concept-phone { position: absolute; z-index: 2; right: -4px; bottom: 4px; width: 164px; height: 326px; padding: 8px; border: 6px solid #fffdf9; border-radius: 28px; background: var(--navy-dark); box-shadow: 0 20px 45px rgba(0,0,0,.35); transform: rotate(5deg); }
+  .concept-phone-screen { height: 100%; padding: 33px 17px 18px; color: var(--navy); background: linear-gradient(145deg, #fffaf3 0 32%, #e4b18e 32%); }
+  .concept-phone-screen b { display: block; margin-bottom: 82px; }
+  .concept-phone-screen strong { display: block; font: 600 1.18rem/1.1 "Playfair Display", serif; }
+  .concept-phone-screen i { width: 74px; height: 8px; margin-top: 21px; }
+  .concept-preview-label { position: absolute; z-index: 3; bottom: 16px; left: -16px; display: grid; grid-template-columns: 31px 1fr; column-gap: 10px; align-items: center; padding: 12px 17px; color: var(--navy); background: var(--cream); box-shadow: 0 14px 32px rgba(0,0,0,.25); }
+  .concept-preview-label span { grid-row: span 2; display: grid; place-items: center; width: 29px; height: 29px; color: white; background: var(--copper); }
+  .concept-preview-label small { color: var(--muted); font: 700 .5rem/1.2 "Montserrat", sans-serif; letter-spacing: .1em; }
+  .concept-preview-label strong { font: 600 .9rem/1.2 "Playfair Display", serif; }
+  .benefit-grid-continued { margin-top: clamp(48px, 6vw, 72px); }
 
   .process-section { background: #fffaf3; }
   .process-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 64px; align-items: start; }
@@ -569,6 +622,7 @@ const benefits = [
   @media (max-width: 1030px) {
     .desktop-nav { display: none; }
     .header-cta { margin-left: auto; }
+    .mobile-menu { display: block; }
     .hero-grid { grid-template-columns: 1fr; padding-top: 56px; }
     .hero-copy { max-width: 800px; }
     .showcase { min-height: 480px; width: min(600px, 90%); margin: 0 auto; }
@@ -581,7 +635,9 @@ const benefits = [
     .enquiry-feature-copy { max-width: 700px; }
     .enquiry-interface { width: min(100%, 580px); min-height: 345px; }
     .process-grid { gap: 40px; }
-    .concept-band { grid-template-columns: 1fr; justify-items: start; }
+    .concept-feature { grid-template-columns: 1fr; gap: 48px; }
+    .concept-feature-copy { max-width: 720px; }
+    .concept-preview { width: min(100%, 570px); }
     .footer-inner { grid-template-columns: auto 1fr; gap: 28px; }
     .footer-tag { grid-column: 2; }
     .delivery-card { grid-template-columns: minmax(0, 150px) minmax(0, 1fr); padding-inline: 40px; }
@@ -598,8 +654,8 @@ const benefits = [
     .header-inner { min-height: 82px; gap: 8px; }
     .brand-logo { width: clamp(118px, 36vw, 138px); }
     .header-cta { display: none; }
-    .mobile-concept { display: inline-flex; flex: 1 1 auto; min-width: 0; min-height: 40px; align-items: center; justify-content: center; padding: 7px 8px; border: 1px solid var(--copper); color: var(--navy-dark); background: var(--copper); font: 700 clamp(.6rem, 2.5vw, .72rem)/1.2 "Montserrat", sans-serif; letter-spacing: .025em; text-align: center; text-decoration: none; text-transform: uppercase; }
-    .mobile-menu { display: block; }
+    .mobile-concept { display: inline-flex; flex: 1 1 0; min-width: 0; min-height: 40px; align-items: center; justify-content: center; padding: 7px 8px; border: 1px solid var(--copper); color: var(--navy-dark); background: var(--copper); font: 700 clamp(.6rem, 2.5vw, .72rem)/1.2 "Montserrat", sans-serif; letter-spacing: .025em; text-align: center; text-decoration: none; text-transform: uppercase; }
+    .mobile-menu { display: block; flex: 0 0 42px; margin-left: 0; }
     .brand-name { font-size: 1.5rem; }
     .hero { padding-top: 82px; }
     .hero-grid { padding-top: 40px; min-height: auto; }
@@ -630,11 +686,29 @@ const benefits = [
     .enquiry-interface { min-height: 310px; padding: 22px; }
     .interface-window { padding: 18px; }
     .booking-chip { right: -6px; bottom: 18px; max-width: 220px; padding: 10px 12px; }
-    .concept-band { margin-top: 42px; padding: 42px 24px; gap: 30px; }
-    .concept-band h2 { font-size: clamp(2.3rem, 11vw, 3.25rem); margin-bottom: 18px; }
-    .concept-band-copy > p:last-child { font-size: 1rem; line-height: 1.7; }
-    .concept-band-action { width: 100%; }
-    .concept-band-action .button { width: 100%; min-height: 56px; padding-inline: 16px; }
+    .concept-feature { margin-top: 42px; padding: 58px 15px; gap: 38px; }
+    .concept-feature h2 { font-size: clamp(2.65rem, 12vw, 3.6rem); margin-bottom: 18px; }
+    .concept-feature-copy > p { font-size: 1rem; line-height: 1.7; }
+    .concept-feature .button { width: 100%; min-height: 58px; padding-inline: 16px; }
+    .concept-preview { min-height: 330px; width: 100%; }
+    .concept-preview-orbit { width: 330px; height: 330px; right: -84px; top: 0; }
+    .concept-desktop { top: 12px; width: calc(100% - 40px); padding: 7px; }
+    .concept-browser-bar { padding-bottom: 7px; }
+    .concept-screen-nav { height: 40px; padding: 0 14px; }
+    .concept-screen-nav i { width: 20px; }
+    .concept-screen-hero { height: 162px; padding: 25px 21px; }
+    .concept-screen-hero strong { font-size: 1.18rem; }
+    .concept-screen-hero em { width: 75px; height: 7px; margin-top: 16px; }
+    .concept-screen-cards { gap: 8px; padding: 12px; }
+    .concept-screen-cards i { height: 31px; }
+    .concept-phone { right: 0; bottom: 0; width: 120px; height: 240px; padding: 5px; border-width: 4px; border-radius: 21px; }
+    .concept-phone-screen { padding: 23px 12px 12px; }
+    .concept-phone-screen b { margin-bottom: 56px; font-size: .42rem; }
+    .concept-phone-screen small { margin-bottom: 10px; font-size: .4rem; }
+    .concept-phone-screen strong { font-size: .84rem; }
+    .concept-phone-screen i { width: 55px; height: 6px; margin-top: 15px; }
+    .concept-preview-label { bottom: 7px; left: 0; padding: 9px 11px; }
+    .concept-preview-label span { width: 24px; height: 24px; }
     .button { width: 100%; padding-inline: 16px; }
     .hero-actions { align-items: stretch; }
     .hero-actions .text-link { align-self: flex-start; }
