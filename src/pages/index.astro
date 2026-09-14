@@ -29,8 +29,8 @@ const benefits = [
   },
   {
     number: "06",
-    title: "Clear routes to act",
-    text: "Focused calls to action support enquiries and existing booking paths, while visitor, enquiry and contact tracking shows what is working.",
+    title: "Clear ways to connect and book",
+    text: "Make it easier for customers to enquire, contact your business and access its existing booking route.",
   },
 ];
 ---
@@ -72,6 +72,8 @@ const benefits = [
         <a class="button button-small header-cta" href={conceptUrl}>
           Get My Free Website Concept
         </a>
+
+        <a class="mobile-concept" href={conceptUrl}>Free Website Concept</a>
 
         <details class="mobile-menu">
           <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
@@ -169,12 +171,43 @@ const benefits = [
             ))}
           </div>
 
+          <section class="enquiry-feature" aria-labelledby="enquiry-feature-title">
+            <div class="enquiry-feature-copy">
+              <p class="eyebrow">BUILT TO TURN INTEREST INTO ACTION</p>
+              <h2 id="enquiry-feature-title">Make it easier for customers to enquire and book.</h2>
+              <p>
+                Your website can include a working contact and enquiry form, clear calls to action, and a connection to your existing supported booking link or widget. We can also track enquiries and booking clicks so you can see what is working.
+              </p>
+              <ul class="enquiry-benefits">
+                <li>Working enquiry forms</li>
+                <li>Existing booking connections</li>
+                <li>Enquiry and booking-click tracking</li>
+              </ul>
+            </div>
+
+            <div class="enquiry-interface" aria-hidden="true">
+              <div class="interface-window">
+                <div class="interface-top"><span></span><span></span><span></span></div>
+                <p>GET IN TOUCH</p>
+                <i></i><i></i><i></i>
+                <b>Send enquiry</b>
+              </div>
+              <div class="booking-chip"><span>✓</span><small>EXISTING BOOKING ROUTE</small><strong>Book an appointment</strong></div>
+            </div>
+          </section>
+
           <div class="concept-band">
-            <div>
+            <div class="concept-band-copy">
               <p class="eyebrow light">YOUR COMPLIMENTARY CONCEPT</p>
               <h2>See what your business could look like online.</h2>
+              <p>
+                We’ll create a tailored website concept for your business, free of charge and with no obligation—so you can see the direction before you decide.
+              </p>
             </div>
-            <a class="button" href={conceptUrl}>Get My Free Website Concept</a>
+            <div class="concept-band-action">
+              <a class="button" href={conceptUrl}>Get My Free Website Concept</a>
+              <span>Tailored to your business</span>
+            </div>
           </div>
         </div>
       </section>
@@ -367,6 +400,7 @@ const benefits = [
   .button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #f2bd9f; outline-offset: 4px; }
   .button-small { min-height: 56px; padding: 16px 20px; }
   .button:active { transform: translateY(0); }
+  .mobile-concept { display: none; }
   .mobile-menu { display: none; margin-left: auto; position: relative; }
   .mobile-menu summary { list-style: none; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.25); display: grid; place-content: center; gap: 5px; cursor: pointer; }
   .mobile-menu summary::-webkit-details-marker { display: none; }
@@ -436,9 +470,40 @@ const benefits = [
   .benefit-icon { width: 42px; height: 42px; margin-bottom: 23px; display: grid; place-items: center; border: 1px solid rgba(199,125,87,.5); transform: rotate(45deg); }
   .benefit-icon span { width: 10px; height: 10px; background: var(--copper); }
   .benefit-card p { color: var(--muted); font-size: 1rem; line-height: 1.75; margin-bottom: 0; }
-  .concept-band { margin-top: var(--content-space); padding: 40px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; justify-content: space-between; gap: 30px; color: white; background: var(--navy); box-shadow: var(--shadow); }
-  .concept-band h2 { color: white; font-size: clamp(1.8rem, 3vw, 2.7rem); margin-bottom: 0; }
-  .concept-band .eyebrow { margin-bottom: 9px; }
+  .enquiry-feature { position: relative; overflow: hidden; margin-top: clamp(48px, 6vw, 72px); padding: clamp(42px, 5.5vw, 70px); display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(310px, .95fr); align-items: center; gap: clamp(38px, 7vw, 100px); border: 1px solid rgba(16,42,63,.12); background: #fffaf3; box-shadow: 0 20px 55px rgba(11,35,53,.08); }
+  .enquiry-feature::before { content: ""; position: absolute; width: 360px; height: 360px; left: -190px; bottom: -245px; border: 1px solid rgba(199,125,87,.25); border-radius: 50%; }
+  .enquiry-feature-copy { position: relative; z-index: 1; max-width: 620px; }
+  .enquiry-feature h2 { font-size: clamp(2.2rem, 3.8vw, 3.9rem); text-wrap: balance; }
+  .enquiry-feature-copy > p:last-of-type { max-width: 600px; color: var(--muted); font-size: 1.05rem; line-height: 1.8; }
+  .enquiry-benefits { display: grid; gap: 12px; padding: 0; margin: 28px 0 0; list-style: none; color: var(--navy); font-size: .9rem; font-weight: 700; letter-spacing: .025em; }
+  .enquiry-benefits li { display: flex; align-items: center; gap: 12px; }
+  .enquiry-benefits li::before { content: ""; width: 9px; height: 9px; flex: 0 0 auto; background: var(--copper); transform: rotate(45deg); }
+  .enquiry-interface { position: relative; min-height: 360px; display: grid; place-items: center; padding: 28px; color: white; background: linear-gradient(135deg, var(--navy-dark), var(--navy-2)); box-shadow: 0 24px 54px rgba(11,35,53,.22); }
+  .enquiry-interface::before, .enquiry-interface::after { content: ""; position: absolute; border: 1px solid rgba(217,148,109,.25); border-radius: 50%; }
+  .enquiry-interface::before { width: 390px; height: 390px; right: -230px; top: -180px; }
+  .enquiry-interface::after { width: 250px; height: 250px; left: -150px; bottom: -170px; }
+  .interface-window { position: relative; z-index: 1; width: min(100%, 335px); padding: 21px; background: var(--white); box-shadow: 0 18px 42px rgba(0,0,0,.24); }
+  .interface-top { display: flex; gap: 5px; margin-bottom: 22px; }
+  .interface-top span { width: 6px; height: 6px; border-radius: 50%; background: #c8d0d5; }
+  .interface-window p { margin-bottom: 16px; color: var(--copper); font: 700 .65rem/1.3 "Montserrat", sans-serif; letter-spacing: .18em; }
+  .interface-window i { display: block; height: 32px; margin-bottom: 10px; border: 1px solid rgba(16,42,63,.2); background: #fffcf7; }
+  .interface-window i:nth-of-type(3) { height: 47px; }
+  .interface-window b { display: block; padding: 11px 14px; color: var(--navy-dark); background: var(--copper); font: 700 .7rem/1.3 "Montserrat", sans-serif; letter-spacing: .05em; text-align: center; text-transform: uppercase; }
+  .booking-chip { position: absolute; z-index: 2; right: -13px; bottom: 26px; display: grid; grid-template-columns: 28px 1fr; column-gap: 10px; align-items: center; max-width: 245px; padding: 12px 15px; color: var(--navy); background: var(--cream); box-shadow: 0 14px 32px rgba(0,0,0,.22); }
+  .booking-chip span { grid-row: span 2; display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; color: white; background: var(--copper); font-size: .78rem; }
+  .booking-chip small { color: var(--muted); font: 700 .5rem/1.2 "Montserrat", sans-serif; letter-spacing: .1em; }
+  .booking-chip strong { font: 600 .88rem/1.25 "Playfair Display", serif; }
+  .concept-band { position: relative; isolation: isolate; overflow: hidden; margin-top: clamp(48px, 6vw, 72px); padding: clamp(50px, 6vw, 78px); display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(275px, .82fr); align-items: center; gap: clamp(36px, 6vw, 92px); color: white; background: linear-gradient(125deg, var(--navy-dark), var(--navy-2)); box-shadow: var(--shadow); }
+  .concept-band::before, .concept-band::after { content: ""; position: absolute; z-index: -1; border: 1px solid rgba(217,148,109,.24); border-radius: 50%; }
+  .concept-band::before { width: 480px; height: 480px; right: -170px; top: -210px; }
+  .concept-band::after { width: 300px; height: 300px; right: 90px; bottom: -230px; }
+  .concept-band-copy { max-width: 650px; }
+  .concept-band h2 { color: white; font-size: clamp(2.5rem, 4.4vw, 4.5rem); margin-bottom: 22px; text-wrap: balance; }
+  .concept-band .eyebrow { margin-bottom: 14px; }
+  .concept-band-copy > p:last-child { max-width: 610px; margin-bottom: 0; color: rgba(255,255,255,.78); font-size: clamp(1rem, 1.4vw, 1.125rem); line-height: 1.8; }
+  .concept-band-action { display: grid; justify-items: start; gap: 14px; }
+  .concept-band-action .button { min-height: 62px; padding-inline: 30px; }
+  .concept-band-action span { color: var(--cream); font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
 
   .process-section { background: #fffaf3; }
   .process-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 64px; align-items: start; }
@@ -512,6 +577,9 @@ const benefits = [
     .hero { min-height: auto; }
     .split-heading { grid-template-columns: 1fr; gap: 15px; }
     .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+    .enquiry-feature { grid-template-columns: 1fr; gap: 44px; }
+    .enquiry-feature-copy { max-width: 700px; }
+    .enquiry-interface { width: min(100%, 580px); min-height: 345px; }
     .process-grid { gap: 40px; }
     .concept-band { grid-template-columns: 1fr; justify-items: start; }
     .footer-inner { grid-template-columns: auto 1fr; gap: 28px; }
@@ -527,12 +595,13 @@ const benefits = [
   @media (max-width: 760px) {
     body { padding-bottom: 58px; }
     .shell { width: min(calc(100% - 30px), 1160px); }
-    .header-inner { min-height: 100px; gap: 16px; }
-    .brand-logo { width: 180px; }
+    .header-inner { min-height: 82px; gap: 8px; }
+    .brand-logo { width: clamp(118px, 36vw, 138px); }
     .header-cta { display: none; }
+    .mobile-concept { display: inline-flex; flex: 1 1 auto; min-width: 0; min-height: 40px; align-items: center; justify-content: center; padding: 7px 8px; border: 1px solid var(--copper); color: var(--navy-dark); background: var(--copper); font: 700 clamp(.6rem, 2.5vw, .72rem)/1.2 "Montserrat", sans-serif; letter-spacing: .025em; text-align: center; text-decoration: none; text-transform: uppercase; }
     .mobile-menu { display: block; }
     .brand-name { font-size: 1.5rem; }
-    .hero { padding-top: 100px; }
+    .hero { padding-top: 82px; }
     .hero-grid { padding-top: 40px; min-height: auto; }
     h1 { font-size: clamp(2.65rem, 13vw, 4rem); }
     .hero-intro { font-size: 1.0625rem; }
@@ -554,7 +623,18 @@ const benefits = [
     .section { padding: var(--section-space) 0; }
     .benefit-grid { grid-template-columns: 1fr; }
     .benefit-card { min-height: auto; padding: 30px 25px; }
-    .concept-band { padding: 32px 24px; }
+    .enquiry-feature { margin-top: 42px; padding: 42px 24px; gap: 34px; }
+    .enquiry-feature h2 { font-size: clamp(2.2rem, 10vw, 3rem); }
+    .enquiry-feature-copy > p:last-of-type { font-size: 1rem; line-height: 1.7; }
+    .enquiry-benefits { gap: 11px; margin-top: 24px; font-size: .84rem; }
+    .enquiry-interface { min-height: 310px; padding: 22px; }
+    .interface-window { padding: 18px; }
+    .booking-chip { right: -6px; bottom: 18px; max-width: 220px; padding: 10px 12px; }
+    .concept-band { margin-top: 42px; padding: 42px 24px; gap: 30px; }
+    .concept-band h2 { font-size: clamp(2.3rem, 11vw, 3.25rem); margin-bottom: 18px; }
+    .concept-band-copy > p:last-child { font-size: 1rem; line-height: 1.7; }
+    .concept-band-action { width: 100%; }
+    .concept-band-action .button { width: 100%; min-height: 56px; padding-inline: 16px; }
     .button { width: 100%; padding-inline: 16px; }
     .hero-actions { align-items: stretch; }
     .hero-actions .text-link { align-self: flex-start; }
