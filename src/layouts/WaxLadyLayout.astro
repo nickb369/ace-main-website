@@ -1,0 +1,48 @@
+---
+import "../styles/wax-lady.css";
+import { nav, site } from "../data/wax-lady-test";
+const { title = site.businessName, description = "Professional waxing and massage appointments in Stowmarket.", active = "" } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="test-banner">A.C.E TEST BUILD - WAX LADY - NOT A LIVE CUSTOMER WEBSITE</div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Wax Lady home">
+        <span class="brand-mark">W</span>
+        <span>
+          <strong>Wax Lady</strong>
+          <small>Waxing & massage in Stowmarket</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        {nav.map((item) => <a class:list={["nav-link", active === item.href && "active"]} href={item.href}>{item.label}</a>)}
+      </nav>
+      <a class="button button-small" href={site.bookingUrl} rel="nofollow">Book an appointment</a>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <div>
+        <strong>Wax Lady</strong>
+        <p>Private, appointment-only waxing and massage in Stowmarket.</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p><a href={site.phoneHref}>{site.phoneDisplay}</a></p>
+        <p>{site.serviceArea}</p>
+      </div>
+      <div>
+        <strong>Appointments</strong>
+        <p>Advance booking only.</p>
+        <a href={site.bookingUrl} rel="nofollow">Book online</a>
+      </div>
+    </footer>
+  </body>
+</html>
