@@ -1,0 +1,30 @@
+---
+import WaxLadyLayout from "../layouts/WaxLadyLayout.astro";
+import { site } from "../data/wax-lady-test";
+---
+<WaxLadyLayout title="About | Wax Lady" description="About Wax Lady, an owner-led waxing and massage business in Stowmarket." active="/about">
+  <header class="page-hero">
+    <span class="eyebrow">About Wax Lady</span>
+    <h1>Personal care in a private setting.</h1>
+    <p>Wax Lady was created to give clients a friendly, relaxed treatment experience, particularly for services that can feel a little intimidating the first time.</p>
+  </header>
+  <section class="page-section">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">The story</span>
+        <h2>Built around comfort and trust.</h2>
+        <p>Joanne trained professionally in beauty and personal care before specialising more heavily in waxing. Over time, she built a regular client base and chose to focus on running her own business.</p>
+        <p>The part she values most is helping people feel comfortable and confident, while getting to know regular clients and creating an experience where people can relax and be themselves.</p>
+      </div>
+      <div class="contact-card">
+        <span class="eyebrow">Trust points</span>
+        <div class="price-list">
+          {site.trust.map((item) => <div class="price-row"><strong>{item}</strong><span>✓</span></div>)}
+        </div>
+      </div>
+    </div>
+    <div class="quote-panel" style="margin-top:2rem">
+      <blockquote>“Clients see the same person each time, appointments aren't rushed, and even intimate treatments should feel comfortable and completely normal.”</blockquote>
+    </div>
+  </section>
+</WaxLadyLayout>
