@@ -1,0 +1,32 @@
+---
+import WaxLadyLayout from "../layouts/WaxLadyLayout.astro";
+import { site } from "../data/wax-lady-test";
+const groups = ["Intimate waxing","Body waxing","Facial waxing","Massage"];
+---
+<WaxLadyLayout title="Treatments & prices | Wax Lady" description="Waxing and massage prices for Wax Lady in Stowmarket." active="/treatments">
+  <header class="page-hero">
+    <span class="eyebrow">Treatments & prices</span>
+    <h1>Simple prices. No guesswork.</h1>
+    <p>Choose the treatment that suits you. If you're unsure which intimate waxing option to book, get in touch before making your appointment.</p>
+  </header>
+  <section class="page-section">
+    <div class="two-col">
+      {groups.map((group) => (
+        <div class="contact-card">
+          <span class="eyebrow">{group}</span>
+          <div class="price-list">
+            {site.services.filter((s) => s.group === group).map((s) => (
+              <div class="price-row"><strong>{s.name}</strong><strong>{s.price}</strong></div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="quote-panel" style="margin-top:2rem">
+      <span class="eyebrow">Booking</span>
+      <blockquote>Appointments are by advance booking only.</blockquote>
+      <p>New clients should follow the preparation guidance provided before their waxing appointment.</p>
+      <a class="button" href={site.bookingUrl} rel="nofollow">Book an appointment</a>
+    </div>
+  </section>
+</WaxLadyLayout>
