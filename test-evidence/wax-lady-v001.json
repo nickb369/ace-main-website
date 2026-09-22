@@ -1,0 +1,41 @@
+{
+  "build_id": "WAX-LADY-TEST-V001",
+  "status": "NON_LIVE_TEST",
+  "source": "A.C.E Essential Website Build Questionnaire submission PDF",
+  "design_director": {
+    "selected_family": "01 Warm Personal",
+    "classification_method": "complete-brief signal matching using locked A.C.E Design Director rules",
+    "signals": [
+      "Owner-led one-to-one service",
+      "Requested personality: Warm & welcoming",
+      "Requested personality: Personal & approachable",
+      "Requested personality: Calm & understated",
+      "Customer experience goal: welcoming, relaxed, reassuring, never judged or rushed",
+      "Explicit rejection of clinical, overly glamorous, cluttered and corporate presentation",
+      "Preference for warm neutrals, soft cream and muted earthy tones",
+      "Primary conversion: book an appointment",
+      "Sensitive/intimate service context where trust and personal reassurance matter"
+    ],
+    "alternatives_considered": [
+      "03 Modern Minimal - supported by calm/understated and clean-layout preferences, but weaker than the owner-led, relationship-driven, warm/personal signals",
+      "05 Precision Professional - supported by professionalism/trust needs, but less aligned with the explicit preference for personal, relaxed, non-corporate presentation"
+    ]
+  },
+  "image_decision": {
+    "customer_images_uploaded": false,
+    "decision": "image-light build using family-owned framing, soft surfaces and organic composition; no invented customer photography",
+    "reason": "Image Production Engine allows fewer images when assets are unavailable and requires website-design quality to remain high"
+  },
+  "architecture": {
+    "core_pages": ["Home", "Treatments & prices", "About", "FAQs", "Contact"],
+    "primary_cta": "Book an appointment",
+    "secondary_ctas": ["Call", "Contact form", "View services", "View prices"],
+    "reviews_module": "omitted - customer supplied no genuine reviews",
+    "gallery_module": "omitted - no customer photographs supplied"
+  },
+  "safety": {
+    "robots": "noindex,nofollow,noarchive",
+    "live_customer_assets_modified": false,
+    "polish_me_pretty_modified": false
+  }
+}
