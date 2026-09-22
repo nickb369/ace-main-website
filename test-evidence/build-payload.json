@@ -1,0 +1,44 @@
+{
+  "build_id": "WAX-LADY-TEST-V001",
+  "mode": "NON_LIVE_TEST",
+  "customer": {
+    "business_name": "Wax Lady",
+    "owner_name": "Joanne Test",
+    "location": "Stowmarket, Suffolk",
+    "service_area": "Stowmarket and surrounding Suffolk areas",
+    "public_phone": "+44 7817 547406",
+    "booking_url": "https://example.com/book-wax-lady"
+  },
+  "design": {
+    "family": "01 Warm Personal",
+    "palette": {
+      "background": "#fbf6ef",
+      "surface": "#fffdf9",
+      "accent": "#b9785d",
+      "accent_dark": "#8a523f",
+      "support": "#758071",
+      "text": "#2d2926"
+    },
+    "image_mode": "image-light-no-invented-photography",
+    "motion": "restrained"
+  },
+  "pages": [
+    {"slug": "/", "name": "Home"},
+    {"slug": "/treatments", "name": "Treatments & prices"},
+    {"slug": "/about", "name": "About"},
+    {"slug": "/faq", "name": "FAQs"},
+    {"slug": "/contact", "name": "Contact"}
+  ],
+  "conversion": {
+    "primary": "Book an appointment",
+    "secondary": ["Call", "Contact form", "View services", "View prices"],
+    "reviews": false,
+    "gallery": false
+  },
+  "controls": {
+    "robots": "noindex,nofollow,noarchive",
+    "test_banner": true,
+    "form_transmission": false,
+    "publish_live": false
+  }
+}
