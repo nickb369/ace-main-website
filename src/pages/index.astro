@@ -1,742 +1,87 @@
 ---
-const conceptUrl = "https://tally.so/r/9qKAL4";
-
-const benefits = [
-  {
-    number: "01",
-    title: "Tailored to your business",
-    text: "A professionally built website shaped around your business, services and customers—not a generic do-it-yourself template.",
-  },
-  {
-    number: "02",
-    title: "See it before you decide",
-    text: "Receive a complimentary personalised concept first, so you can see the direction before deciding whether to continue.",
-  },
-  {
-    number: "03",
-    title: "Managed for you",
-    text: "Hosting, security and ongoing website management are handled by A.C.E, leaving you free to run your business.",
-  },
-  {
-    number: "04",
-    title: "Designed for mobile",
-    text: "A responsive experience that presents your business clearly across phones, tablets and desktop screens.",
-  },
-  {
-    number: "05",
-    title: "Built to be found",
-    text: "Clear page structure and practical SEO foundations help search engines understand your website.",
-  },
-  {
-    number: "06",
-    title: "Clear ways to connect and book",
-    text: "Make it easier for customers to enquire, contact your business and access its existing booking route.",
-  },
-];
+import WaxLadyLayout from "../layouts/WaxLadyLayout.astro";
+import { site } from "../data/wax-lady-test";
 ---
-
-<!doctype html>
-<html lang="en-GB">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="A.C.E creates and manages tailored websites for independent businesses. Request your complimentary personalised website concept."
-    />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-    <meta name="theme-color" content="#102a3f" />
-    <title>A.C.E Tailored | Managed websites for independent businesses</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="#top" aria-label="A.C.E Tailored home">
-  <img class="brand-logo" src="/images/ace-tailored-logo.png" alt="A.C.E Tailored — Attract, Convert, Engage" width="1156" height="530" />
-</a>
-    
-
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#included">What’s included</a>
-          <a href="#process">How it works</a>
-          <a href="#pricing">Pricing</a>
-        </nav>
-
-        <a class="button button-small header-cta" href={conceptUrl}>
-          Get My Complimentary Website Concept
-        </a>
-
-        <a class="mobile-concept" href={conceptUrl}>Get My Complimentary Website Concept</a>
-
-        <details class="mobile-menu">
-          <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
-          <nav aria-label="Mobile navigation">
-            <a href="#included">What’s included</a>
-            <a href="#process">How it works</a>
-            <a href="#pricing">Pricing</a>
-            <a class="button button-small" href={conceptUrl}>Get My Complimentary Website Concept</a>
-          </nav>
-        </details>
+<WaxLadyLayout title="Wax Lady | Waxing & massage in Stowmarket" active="/">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Private. Personal. Professional.</span>
+      <h1>Waxing that feels comfortable from the start.</h1>
+      <p class="lead">Professional waxing and massage appointments from a private treatment room in Stowmarket, with friendly one-to-one care and no rush.</p>
+      <div class="hero-actions">
+        <a class="button" href={site.bookingUrl} rel="nofollow">Book an appointment</a>
+        <a class="button button-secondary" href="/treatments">View treatments & prices</a>
       </div>
-    </header>
-
-    <main id="main">
-      <section class="hero" id="top">
-        <div class="hero-glow"></div>
-        <div class="shell hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow light">TAILORED WEBSITES, BUILT AND MANAGED FOR YOU</p>
-            <h1>See your website concept <em>before you pay a penny.</em></h1>
-            <p class="hero-intro">
-              We’ll create a tailored concept for your business, completely free and with no obligation. If you love it, we’ll build, host and manage the finished website for you.
-            </p>
-            <p class="hero-price">
-              Your tailored website from <strong>£72.25 per month</strong> for the first 12 months, then £39 per month.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href={conceptUrl}>Get My Complimentary Website Concept</a>
-              <a class="text-link" href="#included">See What’s Included <span aria-hidden="true">→</span></a>
-            </div>
-            <p class="reassurance">Start with one short form. No payment. No obligation.</p>
-          </div>
-
-          <div class="showcase" aria-label="Example of a tailored website displayed on desktop and mobile">
-            <div class="orbit orbit-one"></div>
-            <div class="orbit orbit-two"></div>
-            <div class="browser-card">
-              <div class="browser-bar"><span></span><span></span><span></span></div>
-              <div class="sample-site">
-                <div class="sample-nav">
-                  <div class="sample-mark">YOUR<br /><b>BUSINESS</b></div>
-                  <div class="sample-links"><i></i><i></i><i></i></div>
-                </div>
-                <div class="sample-hero">
-                  <p>WELCOME</p>
-                  <h2>Your business,<br />beautifully presented.</h2>
-                  <span>Discover our services</span>
-                </div>
-                <div class="sample-cards"><i></i><i></i><i></i></div>
-              </div>
-            </div>
-            <div class="phone-card">
-              <div class="phone-speaker"></div>
-              <div class="phone-screen">
-                <div class="phone-mark">YOUR<br /><b>BUSINESS</b></div>
-                <p>WELCOME</p>
-                <h3>Made for<br />your customers.</h3>
-                <span>View services</span>
-              </div>
-            </div>
-            <div class="proof-card">
-              <span class="proof-icon" aria-hidden="true">✓</span>
-              <span><small>CREATED FOR</small>Your business</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-ribbon">
-          <div class="shell ribbon-inner">
-            <span>TAILORED DESIGN</span><i></i><span>MANAGED FOR YOU</span><i></i><span>MOBILE FRIENDLY</span><i></i><span>SEO FOUNDATIONS</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section intro-section" id="included">
-        <div class="shell">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow">A BETTER WAY TO GET ONLINE</p>
-              <h2>A professional website.<br /><em>Without the technical burden.</em></h2>
-            </div>
-            <p>
-              You shouldn’t need to become a designer, developer or hosting expert to give your business a
-              strong online presence. A.C.E handles the website while you handle the business.
-            </p>
-          </div>
-
-          <div class="benefit-grid">
-            {benefits.slice(0, 3).map((benefit) => (
-              <article class="benefit-card">
-                <span class="benefit-number">{benefit.number}</span>
-                <div class="benefit-icon" aria-hidden="true"><span></span></div>
-                <h3>{benefit.title}</h3>
-                <p>{benefit.text}</p>
-              </article>
-            ))}
-          </div>
-
-          <section class="concept-feature" aria-labelledby="concept-feature-title">
-            <div class="concept-feature-copy">
-              <p class="eyebrow light">YOUR COMPLIMENTARY CONCEPT</p>
-              <h2 id="concept-feature-title">See what your business could look like online.</h2>
-              <p>
-                Before you commit, A.C.E creates a tailored website concept shaped around your business, services and customers. It is free to request and carries no obligation—so you can see the direction before deciding whether to continue.
-              </p>
-              <a class="button" href={conceptUrl}>Get My Complimentary Website Concept</a>
-              <span class="concept-feature-note">Created around your business, before you decide</span>
-            </div>
-
-            <div class="concept-preview" aria-label="Illustrative desktop and mobile website concept preview; no customer website is shown">
-              <div class="concept-preview-orbit"></div>
-              <div class="concept-desktop">
-                <div class="concept-browser-bar"><span></span><span></span><span></span></div>
-                <div class="concept-screen">
-                  <div class="concept-screen-nav"><b>YOUR<br />BUSINESS</b><i></i><i></i><i></i></div>
-                  <div class="concept-screen-hero"><small>TAILORED WEBSITE CONCEPT</small><strong>A thoughtful online presence,<br />shaped around you.</strong><em></em></div>
-                  <div class="concept-screen-cards"><i></i><i></i><i></i></div>
-                </div>
-              </div>
-              <div class="concept-phone">
-                <div class="concept-phone-screen"><b>YOUR<br />BUSINESS</b><small>CONCEPT PREVIEW</small><strong>Designed for<br />your customers.</strong><i></i></div>
-              </div>
-              <div class="concept-preview-label"><span aria-hidden="true">✦</span><small>COMPLIMENTARY</small><strong>Concept preview</strong></div>
-            </div>
-          </section>
-
-          <div class="benefit-grid benefit-grid-continued">
-            {benefits.slice(3).map((benefit) => (
-              <article class="benefit-card">
-                <span class="benefit-number">{benefit.number}</span>
-                <div class="benefit-icon" aria-hidden="true"><span></span></div>
-                <h3>{benefit.title}</h3>
-                <p>{benefit.text}</p>
-              </article>
-            ))}
-          </div>
-
-          <section class="enquiry-feature" aria-labelledby="enquiry-feature-title">
-            <div class="enquiry-feature-copy">
-              <p class="eyebrow">BUILT TO TURN INTEREST INTO ACTION</p>
-              <h2 id="enquiry-feature-title">Make it easier for customers to enquire and book.</h2>
-              <p>
-                Your website can include a working contact and enquiry form, clear calls to action, and a connection to your existing supported booking link or widget. We can also track enquiries and booking clicks so you can see what is working.
-              </p>
-              <ul class="enquiry-benefits">
-                <li>Working enquiry forms</li>
-                <li>Existing booking connections</li>
-                <li>Enquiry and booking-click tracking</li>
-              </ul>
-            </div>
-
-            <div class="enquiry-interface" aria-hidden="true">
-              <div class="interface-window">
-                <div class="interface-top"><span></span><span></span><span></span></div>
-                <p>GET IN TOUCH</p>
-                <i></i><i></i><i></i>
-                <b>Send enquiry</b>
-              </div>
-              <div class="booking-chip"><span>✓</span><small>EXISTING BOOKING ROUTE</small><strong>Book an appointment</strong></div>
-            </div>
-          </section>
-
-        </div>
-      </section>
-
-      <section class="section process-section" id="process">
-        <div class="shell process-grid">
-          <div class="process-copy">
-            <p class="eyebrow">SIMPLE FROM START TO FINISH</p>
-            <h2>From first idea<br /><em>to ready for review.</em></h2>
-            <p>
-              A clear, guided process gives you confidence at every stage—starting with a complimentary concept
-              created around your business.
-            </p>
-          </div>
-          <ol class="steps">
-            <li><span>01</span><div><h3>Request your concept</h3><p>Tell us a little about your business and where customers can currently find you.</p></div></li>
-            <li><span>02</span><div><h3>See the direction</h3><p>Review your complimentary personalised concept with no obligation to proceed.</p></div></li>
-            <li><span>03</span><div><h3>Give us what we need</h3><p>If you continue, provide the required information, content and access through our guided onboarding.</p></div></li>
-            <li><span>04</span><div><h3>Review the real website</h3><p>We build the completed version, ready for your review before launch.</p></div></li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="delivery-section">
-        <div class="shell delivery-card">
-          <div class="delivery-time">
-            <span class="seven">7</span>
-            <span class="delivery-unit">WORKING DAYS</span>
-          </div>
-          <div class="delivery-copy">
-            <p class="eyebrow light">OUR DELIVERY PROMISE</p>
-            <p>
-              Once we have received all required information, content and access, your completed website will be ready for review within seven working days.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section pricing-section" id="pricing">
-        <div class="shell">
-          <div class="section-heading centred">
-            <p class="eyebrow">CLEAR, STRAIGHTFORWARD PRICING</p>
-            <h2>Choose the way that<br /><em>works for your business.</em></h2>
-          </div>
-
-          <div class="pricing-grid">
-            <article class="price-card recommended">
-              <p class="price-label">RECOMMENDED: SPREAD THE COST</p>
-              <div class="price"><span>£</span><strong>72.25</strong><small>/ month</small></div>
-              <p class="price-term">for the first 12 months, then £39 per month</p>
-              <div class="price-rule"></div>
-              <p>
-                Includes the £399 website-creation cost split into 12 monthly instalments, plus £39 per month for
-                hosting and management.
-              </p>
-              <p class="price-reassurance"><span>✓</span> No large upfront payment.</p>
-              <a class="button full" href={conceptUrl}>Get My Complimentary Website Concept</a>
-            </article>
-
-            <article class="price-card upfront">
-              <p class="price-label">PAY WEBSITE CREATION UPFRONT</p>
-              <div class="price"><span>£</span><strong>399</strong><small> upfront</small></div>
-              <p class="price-term">for website creation</p>
-              <div class="price-rule"></div>
-              <p>Pay the website-creation cost upfront, plus £39 per month for hosting and management.</p>
-              <p class="price-reassurance"><span>✓</span> The same managed service.</p>
-              <a class="button button-outline full" href={conceptUrl}>Get My Complimentary Website Concept</a>
-            </article>
-          </div>
-          <p class="pricing-note">Both options include hosting, security and ongoing website management.</p>
-        </div>
-      </section>
-
-      <section class="final-cta">
-        <div class="final-orbit"></div>
-        <div class="shell final-inner">
-          <p class="eyebrow light">YOUR BUSINESS · YOUR CONCEPT</p>
-          <h2>Ready to see what your business <em>could look like online?</em></h2>
-          <a class="button" href={conceptUrl}>Get My Complimentary Website Concept</a>
-          <p>Your concept is free and carries no obligation.</p>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="shell footer-inner">
-        <a class="brand footer-brand" href="#top" aria-label="A.C.E Tailored home">
-  <img class="brand-logo" src="/images/ace-tailored-logo.png" alt="A.C.E Tailored — Attract, Convert, Engage" width="1156" height="530" />
-</a>
-
-        <p>We create and manage tailored websites for independent businesses.</p>
-        <p class="footer-tag">ATTRACT <i></i> CONVERT <i></i> ENGAGE</p>
+    </div>
+    <div class="soft-panel" aria-label="A calm, welcoming visual panel">
+      <div class="panel-note">
+        <strong>First time?</strong>
+        <span>If you're nervous or unsure which treatment to choose, you're welcome to ask before booking.</span>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <a class="mobile-sticky" href={conceptUrl}>Get My Complimentary Website Concept</a>
-  </body>
-</html>
+  <section class="trust-strip" aria-label="Trust points">
+    {site.trust.map((item) => <div>{item}</div>)}
+  </section>
 
-<style is:global>
-  :root {
-    --cream: #f7f1e8;
-    --cream-deep: #eee4d7;
-    --navy: #102a3f;
-    --navy-2: #17374f;
-    --navy-dark: #0d2639;
-    --copper: #c77d57;
-    --copper-light: #d9946d;
-    --white: #fffdf9;
-    --ink: #183247;
-    --muted: #60707b;
-    --line: rgba(16, 42, 63, 0.2);
-    --section-space: clamp(64px, 7vw, 88px);
-    --content-space: clamp(32px, 4vw, 48px);
-    --shadow: 0 24px 70px rgba(11, 35, 53, 0.14);
-  }
+  <section class="section alt">
+    <div class="section-grid">
+      <div>
+        <span class="eyebrow">Treatments</span>
+        <h2>Clear choices, simple prices.</h2>
+        <p>Waxing and massage treatments with prices shown upfront, so you know what to expect before you book.</p>
+        <a class="button button-secondary" href="/treatments">See the full price list</a>
+      </div>
+      <div class="cards">
+        <article class="card"><h3>Intimate waxing</h3><p>Discreet, professional appointments designed to feel straightforward and comfortable.</p></article>
+        <article class="card"><h3>Body waxing</h3><p>From underarm and leg waxing to back or chest treatments.</p></article>
+        <article class="card"><h3>Facial waxing</h3><p>Simple eyebrow, lip and chin waxing with clear pricing.</p></article>
+        <article class="card"><h3>Massage</h3><p>30- and 60-minute massage appointments in the same private setting.</p></article>
+      </div>
+    </div>
+  </section>
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    overflow-x: clip;
-    color: var(--ink);
-    background: var(--cream);
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: inherit; }
-  h1, h2, h3, p { margin-top: 0; }
-  h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; color: var(--navy); line-height: 1.08; }
-  h1 { font-size: clamp(2.9rem, 5.8vw, 5.7rem); letter-spacing: -0.045em; margin-bottom: 1.55rem; }
-  h2 { font-size: clamp(2.3rem, 4vw, 4.25rem); letter-spacing: -0.035em; margin-bottom: 1.3rem; }
-  h3 { font-size: 1.45rem; margin-bottom: 0.7rem; }
-  em { color: var(--copper-light); font-weight: 500; }
-  .shell { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
-  .skip-link { position: fixed; left: 16px; top: -80px; z-index: 100; background: white; padding: 10px 16px; }
-  .skip-link:focus { top: 12px; }
+  <section class="section">
+    <div class="two-col">
+      <div class="quote-panel">
+        <span class="eyebrow">The experience</span>
+        <blockquote>“Welcoming, relaxed and reassuring — never judged or rushed.”</blockquote>
+      </div>
+      <div>
+        <span class="eyebrow">Owner-led care</span>
+        <h2>The same person, every visit.</h2>
+        <p>Wax Lady is an owner-led business built around privacy, trust and personal one-to-one service. The aim is simple: make treatments that can feel intimidating feel completely normal.</p>
+        <p>Appointments are by advance booking only from a private treatment room in Stowmarket.</p>
+        <a class="button button-secondary" href="/about">About Wax Lady</a>
+      </div>
+    </div>
+  </section>
 
-  .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    color: white;
-    background: var(--navy);
-    border-bottom: 1px solid rgba(255,255,255,.13);
-  }
-.header-inner {
-  width: min(1120px, calc(100% - 40px));
-  min-height: 92px;
-  padding-block: 8px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
+  <section class="section alt">
+    <div class="section-grid">
+      <div>
+        <span class="eyebrow">Before you book</span>
+        <h2>New to waxing? Start here.</h2>
+        <p>Questions about preparation, discomfort, treatment differences and aftercare are normal. The FAQ page covers the things new clients most often want to know.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><h3>Preparation</h3><p>How to get ready before your appointment.</p></article>
+        <article class="card"><h3>What to expect</h3><p>A clear, discreet explanation of how appointments work.</p></article>
+        <article class="card"><h3>Aftercare</h3><p>What to avoid after waxing and how to look after your skin.</p></article>
+        <article class="card"><h3>Still unsure?</h3><p>Call before booking if you're not sure which treatment is right for you.</p></article>
+      </div>
+    </div>
+  </section>
 
-.brand { flex: 0 0 auto; }
-
-.brand-logo {
-  display: block;
-  width: 240px;
-  height: auto;
-}
-
-.footer-brand .brand-logo {
-  width: 240px;
-}
-  .desktop-nav { margin-left: auto; display: flex; gap: 22px; align-items: center; }
-  .desktop-nav a { font-size: .875rem; letter-spacing: .04em; text-decoration: none; text-transform: uppercase; font-weight: 600; opacity: .82; }
-  .desktop-nav a:hover { opacity: 1; color: var(--copper-light); }
-  .button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 56px;
-    flex-shrink: 0;
-    max-width: 100%;
-    padding: 16px 24px;
-    border: 1px solid var(--copper);
-    border-radius: 2px;
-    color: var(--navy-dark);
-    background: var(--copper);
-    box-shadow: 0 12px 34px rgba(199, 125, 87, .22);
-    font: 700 .875rem/1.4 "Montserrat", sans-serif;
-    letter-spacing: .025em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: transform .2s ease, background .2s ease, border-color .2s ease;
-  }
-  .button:hover { transform: translateY(-2px); background: var(--copper-light); border-color: var(--copper-light); }
-  .button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #f2bd9f; outline-offset: 4px; }
-  .button-small { min-height: 56px; padding: 16px 20px; }
-  .button:active { transform: translateY(0); }
-  .mobile-concept { display: none; }
-  .mobile-menu { display: none; margin-left: auto; position: relative; }
-  .mobile-menu summary { list-style: none; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.25); display: grid; place-content: center; gap: 5px; cursor: pointer; }
-  .mobile-menu summary::-webkit-details-marker { display: none; }
-  .mobile-menu summary span { display: block; width: 20px; height: 1px; background: white; }
-  .mobile-menu nav { position: absolute; right: 0; top: 52px; width: min(310px, calc(100vw - 40px)); background: var(--navy-dark); padding: 20px; box-shadow: var(--shadow); display: grid; gap: 14px; }
-  .mobile-menu nav > a:not(.button) { text-decoration: none; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; padding: 5px; }
-
-  .hero { min-height: auto; position: relative; overflow: hidden; color: rgba(255,255,255,.82); background: linear-gradient(128deg, var(--navy-dark) 0%, var(--navy) 56%, #173b55 100%); padding-top: 126px; }
-  .hero::before { content: ""; position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 58px 58px; mask-image: linear-gradient(to right, black, transparent 76%); }
-  .hero-glow { position: absolute; width: 560px; height: 560px; border-radius: 50%; right: -170px; top: 80px; background: rgba(199,125,87,.11); filter: blur(2px); }
-  .hero-grid { position: relative; min-height: 645px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: 36px; padding-block: 62px 44px; }
-  .hero-copy { position: relative; z-index: 3; max-width: 690px; }
-  .hero h1 { color: white; text-wrap: balance; }
-  .eyebrow { display: flex; align-items: center; gap: 11px; color: var(--navy); font: 700 .8125rem/1.5 "Montserrat", sans-serif; letter-spacing: .14em; margin-bottom: 1.45rem; }
-  .eyebrow.light { color: var(--copper-light); }
-  .eyebrow i, .footer-tag i { display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: currentColor; }
-  .hero-intro { max-width: 640px; font-size: 1.125rem; line-height: 1.75; }
-  .hero-price { border-left: 2px solid var(--copper); padding-left: 16px; max-width: 550px; font-size: 1rem; color: var(--white); }
-  .hero-price strong { color: white; }
-  .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px 24px; margin-top: 28px; }
-  .text-link { color: white; font-size: .875rem; text-transform: uppercase; text-decoration: none; letter-spacing: .07em; font-weight: 600; white-space: nowrap; }
-  .text-link span { color: var(--copper-light); margin-left: 7px; }
-  .reassurance { margin: 18px 0 0; font-size: .9375rem; line-height: 1.65; color: var(--white); }
-  .reassurance span { color: var(--copper-light); margin-right: 6px; }
-
-  .showcase { position: relative; min-height: 520px; transform: none; }
-  .browser-card { position: absolute; width: min(500px, 100%); height: 345px; top: 70px; left: 5px; border: 7px solid rgba(255,255,255,.92); border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 38px 90px rgba(0,0,0,.36); transform: perspective(1000px) rotateY(-5deg) rotateZ(1deg); }
-  .browser-bar { height: 23px; background: #eef0f1; display: flex; align-items: center; gap: 4px; padding-left: 9px; }
-  .browser-bar span { width: 5px; height: 5px; border-radius: 50%; background: #c3c8ca; }
-  .sample-site { height: calc(100% - 23px); background: #faf6ef; }
-  .sample-nav { height: 55px; display: flex; align-items: center; padding: 0 28px; color: #214153; }
-  .sample-mark, .phone-mark { font: 500 .55rem/1.05 "Playfair Display", serif; letter-spacing: .1em; }
-  .sample-mark b, .phone-mark b { font-size: .46rem; color: var(--copper); }
-  .sample-links { margin-left: auto; display: flex; gap: 14px; }
-  .sample-links i { width: 32px; height: 2px; background: #d5c9bd; }
-  .sample-hero { height: 190px; color: white; padding: 35px 40px; background: linear-gradient(100deg, rgba(16,42,63,.97), rgba(18,56,77,.78)), radial-gradient(circle at 85% 20%, #caa78f, #25485c 50%, #112e42); }
-  .sample-hero p, .phone-screen p { font: 600 .42rem "Montserrat", sans-serif; color: #dfa17e; letter-spacing: .25em; margin-bottom: 10px; }
-  .sample-hero h2 { font-size: 1.65rem; color: white; margin: 0 0 16px; letter-spacing: -.02em; }
-  .sample-hero span, .phone-screen span { display: inline-block; font: 600 .42rem "Montserrat", sans-serif; text-transform: uppercase; letter-spacing: .08em; background: var(--copper); padding: 7px 12px; }
-  .sample-cards { display: flex; gap: 10px; padding: 18px 28px; }
-  .sample-cards i { height: 54px; flex: 1; background: linear-gradient(135deg, #e8ded1, #c9b39f); }
-  .phone-card { position: absolute; z-index: 2; width: 155px; height: 315px; right: 0; top: 190px; border: 7px solid #eef0ef; border-radius: 24px; background: #111b23; padding: 7px; box-shadow: 0 30px 70px rgba(0,0,0,.4); transform: rotate(3deg); }
-  .phone-speaker { position: absolute; z-index: 3; top: 7px; left: 50%; transform: translateX(-50%); width: 45px; height: 5px; border-radius: 5px; background: #071016; }
-  .phone-screen { height: 100%; border-radius: 14px; padding: 27px 14px 15px; background: linear-gradient(to bottom, #faf4e9 0 22%, transparent 22%), linear-gradient(155deg, rgba(12,38,56,.84), rgba(24,60,78,.7)), radial-gradient(circle at 60% 75%, #c38a6b, #15374c 55%); color: white; }
-  .phone-mark { color: var(--navy); margin-bottom: 72px; }
-  .phone-screen h3 { color: white; font-size: 1.25rem; margin-bottom: 15px; }
-  .proof-card { position: absolute; z-index: 4; bottom: 14px; left: -20px; display: flex; align-items: center; gap: 12px; background: white; color: var(--navy); padding: 12px 20px; box-shadow: 0 18px 50px rgba(0,0,0,.27); font-family: "Playfair Display", serif; }
-  .proof-card small { display: block; color: var(--muted); font: 600 .48rem "Montserrat", sans-serif; letter-spacing: .12em; }
-  .proof-icon { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; color: white; background: var(--copper); }
-  .orbit { position: absolute; border: 1px solid rgba(217,148,109,.27); border-radius: 50%; }
-  .orbit-one { width: 520px; height: 520px; right: -120px; top: 10px; }
-  .orbit-two { width: 390px; height: 390px; right: -55px; top: 75px; }
-  .hero-ribbon { position: relative; border-top: 1px solid rgba(255,255,255,.12); background: rgba(7,27,42,.45); }
-  .ribbon-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; color: var(--cream); font-size: .8125rem; font-weight: 600; letter-spacing: .14em; }
-  .ribbon-inner i { width: 4px; height: 4px; border-radius: 50%; background: var(--copper); }
-
-  .section { padding: var(--section-space) 0; }
-  .intro-section { background: var(--cream); }
-  .intro-section em, .process-section em, .pricing-section em { color: var(--navy); }
-  .pricing-section a:focus-visible { outline-color: var(--navy); }
-  .split-heading { display: grid; grid-template-columns: 1.25fr .75fr; gap: 48px; align-items: center; margin-bottom: var(--content-space); }
-  .split-heading p:last-child { color: var(--muted); max-width: 440px; margin-bottom: 18px; }
-  .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 1px solid var(--line); border-top: 1px solid var(--line); }
-  .benefit-card { min-height: 285px; padding: 34px 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; background: rgba(255,255,255,.14); transition: background .2s, transform .2s; }
-  .benefit-card:hover { background: rgba(255,255,255,.46); transform: translateY(-3px); }
-  .benefit-number { position: absolute; right: 20px; top: 18px; font-size: .8125rem; color: var(--muted); letter-spacing: .12em; }
-  .benefit-icon { width: 42px; height: 42px; margin-bottom: 23px; display: grid; place-items: center; border: 1px solid rgba(199,125,87,.5); transform: rotate(45deg); }
-  .benefit-icon span { width: 10px; height: 10px; background: var(--copper); }
-  .benefit-card p { color: var(--muted); font-size: 1rem; line-height: 1.75; margin-bottom: 0; }
-  .enquiry-feature { position: relative; overflow: hidden; margin-top: clamp(48px, 6vw, 72px); padding: clamp(42px, 5.5vw, 70px); display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(310px, .95fr); align-items: center; gap: clamp(38px, 7vw, 100px); border: 1px solid rgba(16,42,63,.12); background: #fffaf3; box-shadow: 0 20px 55px rgba(11,35,53,.08); }
-  .enquiry-feature::before { content: ""; position: absolute; width: 360px; height: 360px; left: -190px; bottom: -245px; border: 1px solid rgba(199,125,87,.25); border-radius: 50%; }
-  .enquiry-feature-copy { position: relative; z-index: 1; max-width: 620px; }
-  .enquiry-feature h2 { font-size: clamp(2.2rem, 3.8vw, 3.9rem); text-wrap: balance; }
-  .enquiry-feature-copy > p:last-of-type { max-width: 600px; color: var(--muted); font-size: 1.05rem; line-height: 1.8; }
-  .enquiry-benefits { display: grid; gap: 12px; padding: 0; margin: 28px 0 0; list-style: none; color: var(--navy); font-size: .9rem; font-weight: 700; letter-spacing: .025em; }
-  .enquiry-benefits li { display: flex; align-items: center; gap: 12px; }
-  .enquiry-benefits li::before { content: ""; width: 9px; height: 9px; flex: 0 0 auto; background: var(--copper); transform: rotate(45deg); }
-  .enquiry-interface { position: relative; min-height: 360px; display: grid; place-items: center; padding: 28px; color: white; background: linear-gradient(135deg, var(--navy-dark), var(--navy-2)); box-shadow: 0 24px 54px rgba(11,35,53,.22); }
-  .enquiry-interface::before, .enquiry-interface::after { content: ""; position: absolute; border: 1px solid rgba(217,148,109,.25); border-radius: 50%; }
-  .enquiry-interface::before { width: 390px; height: 390px; right: -230px; top: -180px; }
-  .enquiry-interface::after { width: 250px; height: 250px; left: -150px; bottom: -170px; }
-  .interface-window { position: relative; z-index: 1; width: min(100%, 335px); padding: 21px; background: var(--white); box-shadow: 0 18px 42px rgba(0,0,0,.24); }
-  .interface-top { display: flex; gap: 5px; margin-bottom: 22px; }
-  .interface-top span { width: 6px; height: 6px; border-radius: 50%; background: #c8d0d5; }
-  .interface-window p { margin-bottom: 16px; color: var(--copper); font: 700 .65rem/1.3 "Montserrat", sans-serif; letter-spacing: .18em; }
-  .interface-window i { display: block; height: 32px; margin-bottom: 10px; border: 1px solid rgba(16,42,63,.2); background: #fffcf7; }
-  .interface-window i:nth-of-type(3) { height: 47px; }
-  .interface-window b { display: block; padding: 11px 14px; color: var(--navy-dark); background: var(--copper); font: 700 .7rem/1.3 "Montserrat", sans-serif; letter-spacing: .05em; text-align: center; text-transform: uppercase; }
-  .booking-chip { position: absolute; z-index: 2; right: -13px; bottom: 26px; display: grid; grid-template-columns: 28px 1fr; column-gap: 10px; align-items: center; max-width: 245px; padding: 12px 15px; color: var(--navy); background: var(--cream); box-shadow: 0 14px 32px rgba(0,0,0,.22); }
-  .booking-chip span { grid-row: span 2; display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; color: white; background: var(--copper); font-size: .78rem; }
-  .booking-chip small { color: var(--muted); font: 700 .5rem/1.2 "Montserrat", sans-serif; letter-spacing: .1em; }
-  .booking-chip strong { font: 600 .88rem/1.25 "Playfair Display", serif; }
-  .concept-feature { position: relative; isolation: isolate; overflow: hidden; width: 100vw; margin: clamp(48px, 6vw, 72px) calc(50% - 50vw); padding: clamp(64px, 8vw, 112px) max(20px, calc((100vw - 1160px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr) minmax(390px, .88fr); align-items: center; gap: clamp(48px, 7vw, 110px); color: white; background: linear-gradient(125deg, var(--navy-dark), var(--navy-2)); box-shadow: var(--shadow); }
-  .concept-feature::before, .concept-feature::after { content: ""; position: absolute; z-index: -1; border: 1px solid rgba(217,148,109,.22); border-radius: 50%; }
-  .concept-feature::before { width: 620px; height: 620px; left: -330px; top: -300px; }
-  .concept-feature::after { width: 520px; height: 520px; right: -270px; bottom: -310px; }
-  .concept-feature-copy { max-width: 650px; }
-  .concept-feature h2 { color: white; font-size: clamp(3rem, 5vw, 5.2rem); margin-bottom: 24px; text-wrap: balance; }
-  .concept-feature .eyebrow { margin-bottom: 16px; }
-  .concept-feature-copy > p { max-width: 610px; color: rgba(255,255,255,.82); font-size: clamp(1rem, 1.4vw, 1.125rem); line-height: 1.8; }
-  .concept-feature .button { min-height: 64px; margin-top: 10px; padding-inline: 30px; }
-  .concept-feature-note { display: block; margin-top: 16px; color: var(--cream); font-size: .76rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
-  .concept-preview { position: relative; min-height: 440px; }
-  .concept-preview-orbit { position: absolute; width: 440px; height: 440px; right: -30px; top: 2px; border: 1px solid rgba(217,148,109,.34); border-radius: 50%; }
-  .concept-desktop { position: absolute; top: 24px; left: 0; width: min(100%, 490px); padding: 11px; background: #fdf8f0; box-shadow: 0 30px 65px rgba(0,0,0,.3); transform: rotate(-2deg); }
-  .concept-browser-bar { display: flex; gap: 5px; padding: 1px 0 10px; }
-  .concept-browser-bar span { width: 6px; height: 6px; border-radius: 50%; background: #c7d0d4; }
-  .concept-screen { overflow: hidden; background: #e6d3bd; }
-  .concept-screen-nav { height: 57px; display: flex; align-items: center; gap: 13px; padding: 0 24px; background: #fffdf9; color: var(--navy); }
-  .concept-screen-nav b, .concept-phone-screen b { margin-right: auto; font: 700 .55rem/1.05 "Montserrat", sans-serif; letter-spacing: .06em; }
-  .concept-screen-nav i { width: 34px; height: 4px; background: rgba(16,42,63,.32); }
-  .concept-screen-hero { height: 226px; padding: 40px 42px; background: linear-gradient(125deg, #e9d3bc, #dba27e); color: var(--navy); }
-  .concept-screen-hero small, .concept-phone-screen small { display: block; margin-bottom: 14px; color: #70432d; font: 700 .58rem/1.3 "Montserrat", sans-serif; letter-spacing: .12em; }
-  .concept-screen-hero strong { display: block; font: 600 clamp(1.4rem, 2.6vw, 2rem)/1.1 "Playfair Display", serif; }
-  .concept-screen-hero em, .concept-phone-screen i { display: block; width: 104px; height: 10px; margin-top: 24px; background: var(--navy); }
-  .concept-screen-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 20px; background: #fffdf9; }
-  .concept-screen-cards i { height: 50px; background: #e9e2d8; }
-  .concept-phone { position: absolute; z-index: 2; right: -4px; bottom: 4px; width: 164px; height: 326px; padding: 8px; border: 6px solid #fffdf9; border-radius: 28px; background: var(--navy-dark); box-shadow: 0 20px 45px rgba(0,0,0,.35); transform: rotate(5deg); }
-  .concept-phone-screen { height: 100%; padding: 33px 17px 18px; color: var(--navy); background: linear-gradient(145deg, #fffaf3 0 32%, #e4b18e 32%); }
-  .concept-phone-screen b { display: block; margin-bottom: 82px; }
-  .concept-phone-screen strong { display: block; font: 600 1.18rem/1.1 "Playfair Display", serif; }
-  .concept-phone-screen i { width: 74px; height: 8px; margin-top: 21px; }
-  .concept-preview-label { position: absolute; z-index: 3; bottom: 16px; left: -16px; display: grid; grid-template-columns: 31px 1fr; column-gap: 10px; align-items: center; padding: 12px 17px; color: var(--navy); background: var(--cream); box-shadow: 0 14px 32px rgba(0,0,0,.25); }
-  .concept-preview-label span { grid-row: span 2; display: grid; place-items: center; width: 29px; height: 29px; color: white; background: var(--copper); }
-  .concept-preview-label small { color: var(--muted); font: 700 .5rem/1.2 "Montserrat", sans-serif; letter-spacing: .1em; }
-  .concept-preview-label strong { font: 600 .9rem/1.2 "Playfair Display", serif; }
-  .benefit-grid-continued { margin-top: clamp(48px, 6vw, 72px); }
-
-  .process-section { background: #fffaf3; }
-  .process-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 64px; align-items: start; }
-  .process-copy { position: sticky; top: 40px; }
-  .process-copy h2 { font-size: clamp(2.3rem, 3.5vw, 3.5rem); text-wrap: balance; }
-  .split-heading h2 { font-size: clamp(2.3rem, 3.8vw, 3.8rem); text-wrap: balance; }
-  .process-copy > p:last-child { color: var(--muted); max-width: 460px; }
-  .steps { list-style: none; padding: 0; margin: 0; }
-  .steps li { display: grid; grid-template-columns: 62px 1fr; gap: 26px; padding: 0 0 24px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
-  .steps li > span { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; color: var(--navy); border: 1px solid var(--copper); font-size: .875rem; font-weight: 700; letter-spacing: .08em; }
-  .steps li:last-child { margin-bottom: 0; }
-  .steps h3 { margin-bottom: 8px; }
-  .steps p { margin: 0; color: var(--muted); font-size: 1rem; }
-
-  .delivery-section { padding: 0 0 var(--section-space); background: #fffaf3; }
-  .delivery-card { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr); align-items: center; gap: 36px; padding: 54px 60px; color: rgba(255,255,255,.75); background: linear-gradient(120deg, var(--navy-dark), var(--navy-2)); box-shadow: var(--shadow); }
-  .delivery-card::after { content: ""; position: absolute; width: 280px; height: 280px; right: -100px; top: -130px; border: 1px solid rgba(217,148,109,.3); border-radius: 50%; }
-  .delivery-time { display: grid; justify-items: center; gap: 4px; min-width: 0; }
-  .delivery-unit { white-space: nowrap; color: white; font-size: .9375rem; font-weight: 700; letter-spacing: .12em; text-align: center; }
-  .delivery-copy { min-width: 0; }
-  .delivery-copy p:last-child { margin-bottom: 0; font-size: 1rem; }
-  .seven { font: 600 clamp(6.5rem, 12vw, 9.5rem)/1 "Playfair Display", serif; color: var(--copper-light); text-align: center; }
-
-  .pricing-section { background: var(--cream); }
-  .centred { max-width: 760px; text-align: center; margin: 0 auto var(--content-space); }
-  .centred .eyebrow { justify-content: center; }
-  .pricing-grid { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; gap: 24px; }
-  .price-card { display: flex; flex-direction: column; min-width: 0; position: relative; padding: 36px; border: 1px solid var(--line); background: rgba(255,255,255,.48); }
-  .price-card.recommended { color: rgba(255,255,255,.78); background: var(--navy); border-color: var(--navy); box-shadow: var(--shadow); }
-  .price-label { font-size: .8125rem; font-weight: 700; letter-spacing: .1em; color: var(--navy); }
-  .recommended .price-label { color: var(--copper-light); }
-  .price { display: flex; align-items: baseline; color: var(--navy); margin: 10px 0 16px; }
-  .recommended .price { color: white; }
-  .price > span { font-family: "Playfair Display", serif; font-size: clamp(1.75rem, 3vw, 2.6rem); line-height: 1; }
-  .price strong { font: 500 clamp(3.5rem, 6vw, 5.2rem)/.86 "Playfair Display", serif; letter-spacing: -.05em; }
-  .price small { margin-left: 8px; font-size: .9375rem; white-space: nowrap; }
-  .price-term { font-size: 1rem; min-height: 28px; }
-  .price-rule { height: 1px; background: currentColor; opacity: .15; margin: 25px 0; }
-  .price-card > p:not(.price-label):not(.price-term):not(.price-reassurance) { font-size: 1rem; min-height: 112px; }
-  .price-reassurance { font-size: .9375rem; font-weight: 600; margin: 24px 0; }
-  .price-reassurance span { color: var(--copper-light); margin-right: 6px; }
-  .full { width: 100%; margin-top: auto; }
-  .button-outline { color: var(--navy); border-color: var(--navy); background: transparent; box-shadow: none; }
-  .button-outline:hover { color: white; background: var(--navy); border-color: var(--navy); }
-  .pricing-note { text-align: center; color: var(--muted); font-size: .9375rem; margin: 24px 0 0; }
-
-  .final-cta { position: relative; overflow: hidden; padding: var(--section-space) 0; background: var(--navy-dark); color: rgba(255,255,255,.7); text-align: center; }
-  .final-cta::before { content: ""; position: absolute; inset: 0; opacity: .25; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 58px 58px; }
-  .final-orbit { position: absolute; width: 600px; height: 600px; border: 1px solid rgba(217,148,109,.15); border-radius: 50%; left: 50%; top: 50%; transform: translate(-50%, -50%); }
-  .final-inner { position: relative; z-index: 2; }
-  .final-inner .eyebrow { justify-content: center; }
-  .final-cta h2 { color: white; }
-  .final-cta .button { margin: 16px 0 20px; }
-  .final-cta p:last-child { font-size: 1rem; color: var(--cream); }
-
-  footer { padding: 44px 0; color: rgba(255,255,255,.58); background: #081d2d; }
-  .footer-inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 45px; }
-  .footer-brand { color: white; }
-  .footer-inner > p { margin: 0; font-size: .875rem; color: var(--cream); }
-  .footer-tag { display: flex; align-items: center; gap: 8px; color: var(--copper-light); letter-spacing: .12em; font-weight: 600; }
-  .mobile-sticky { display: none; }
-
-  @media (max-width: 1030px) {
-    .desktop-nav { display: none; }
-    .header-cta { margin-left: auto; }
-    .mobile-menu { display: block; }
-    .hero-grid { grid-template-columns: 1fr; padding-top: 56px; }
-    .hero-copy { max-width: 800px; }
-    .showcase { min-height: 480px; width: min(600px, 90%); margin: 0 auto; }
-    .browser-card { width: min(500px, 87%); }
-    .phone-card { right: 0; }
-    .hero { min-height: auto; }
-    .split-heading { grid-template-columns: 1fr; gap: 15px; }
-    .benefit-grid { grid-template-columns: repeat(2, 1fr); }
-    .enquiry-feature { grid-template-columns: 1fr; gap: 44px; }
-    .enquiry-feature-copy { max-width: 700px; }
-    .enquiry-interface { width: min(100%, 580px); min-height: 345px; }
-    .process-grid { gap: 40px; }
-    .concept-feature { grid-template-columns: 1fr; gap: 48px; }
-    .concept-feature-copy { max-width: 720px; }
-    .concept-preview { width: min(100%, 570px); }
-    .footer-inner { grid-template-columns: auto 1fr; gap: 28px; }
-    .footer-tag { grid-column: 2; }
-    .delivery-card { grid-template-columns: minmax(0, 150px) minmax(0, 1fr); padding-inline: 40px; }
-  }
-
-  @media (min-width: 761px) and (max-width: 900px) {
-    .pricing-grid { grid-template-columns: 1fr; max-width: 560px; }
-    .price-card > p:not(.price-label):not(.price-term):not(.price-reassurance) { min-height: 0; }
-  }
-
-  @media (max-width: 760px) {
-    body { padding-bottom: 58px; }
-    .shell { width: min(calc(100% - 30px), 1160px); }
-    .header-inner { width: calc(100% - 30px); min-height: 82px; gap: 8px; }
-    .brand-logo { width: clamp(100px, 31vw, 138px); }
-    .header-cta { display: none; }
-    .mobile-concept { display: inline-flex; flex: 1 1 0; min-width: 0; min-height: 48px; align-items: center; justify-content: center; padding: 6px 8px; border: 1px solid var(--copper); color: var(--navy-dark); background: var(--copper); font: 700 clamp(.56rem, 2.4vw, .72rem)/1.2 "Montserrat", sans-serif; letter-spacing: .025em; text-align: center; text-decoration: none; text-transform: uppercase; }
-    .mobile-menu { display: block; flex: 0 0 42px; margin-left: 0; }
-    .brand-name { font-size: 1.5rem; }
-    .hero { padding-top: 82px; }
-    .hero-grid { padding-top: 40px; min-height: auto; }
-    h1 { font-size: clamp(2.65rem, 13vw, 4rem); }
-    .hero-intro { font-size: 1.0625rem; }
-    .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
-    .showcase { min-height: 350px; width: 100%; margin-top: 15px; transform: none; }
-    .browser-card { top: 30px; left: -10px; width: 94%; height: 250px; }
-    .sample-hero { height: 135px; padding: 22px 25px; }
-    .sample-hero h2 { font-size: 1.2rem; }
-    .sample-cards { padding: 12px 18px; }
-    .sample-cards i { height: 35px; }
-    .phone-card { top: 110px; right: -4px; width: 112px; height: 226px; border-width: 5px; border-radius: 18px; }
-    .phone-mark { margin-bottom: 42px; }
-    .phone-screen h3 { font-size: .87rem; }
-    .phone-screen span { font-size: .31rem; padding: 5px 7px; }
-    .proof-card { left: 5px; bottom: 8px; padding: 9px 13px; font-size: .8rem; }
-    .orbit { display: none; }
-    .ribbon-inner { min-height: 65px; justify-content: space-around; }
-    .ribbon-inner span:nth-of-type(n+3), .ribbon-inner i:nth-of-type(n+2) { display: none; }
-    .section { padding: var(--section-space) 0; }
-    .benefit-grid { grid-template-columns: 1fr; }
-    .benefit-card { min-height: auto; padding: 30px 25px; }
-    .enquiry-feature { margin-top: 42px; padding: 42px 24px; gap: 34px; }
-    .enquiry-feature h2 { font-size: clamp(2.2rem, 10vw, 3rem); }
-    .enquiry-feature-copy > p:last-of-type { font-size: 1rem; line-height: 1.7; }
-    .enquiry-benefits { gap: 11px; margin-top: 24px; font-size: .84rem; }
-    .enquiry-interface { min-height: 310px; padding: 22px; }
-    .interface-window { padding: 18px; }
-    .booking-chip { right: -6px; bottom: 18px; max-width: 220px; padding: 10px 12px; }
-    .concept-feature { margin-top: 42px; padding: 58px 15px; gap: 38px; }
-    .concept-feature h2 { font-size: clamp(2.65rem, 12vw, 3.6rem); margin-bottom: 18px; }
-    .concept-feature-copy > p { font-size: 1rem; line-height: 1.7; }
-    .concept-feature .button { width: 100%; min-height: 58px; padding-inline: 16px; }
-    .concept-preview { min-height: 330px; width: 100%; }
-    .concept-preview-orbit { width: 330px; height: 330px; right: -84px; top: 0; }
-    .concept-desktop { top: 12px; width: calc(100% - 40px); padding: 7px; }
-    .concept-browser-bar { padding-bottom: 7px; }
-    .concept-screen-nav { height: 40px; padding: 0 14px; }
-    .concept-screen-nav i { width: 20px; }
-    .concept-screen-hero { height: 162px; padding: 25px 21px; }
-    .concept-screen-hero strong { font-size: 1.18rem; }
-    .concept-screen-hero em { width: 75px; height: 7px; margin-top: 16px; }
-    .concept-screen-cards { gap: 8px; padding: 12px; }
-    .concept-screen-cards i { height: 31px; }
-    .concept-phone { right: 0; bottom: 0; width: 120px; height: 240px; padding: 5px; border-width: 4px; border-radius: 21px; }
-    .concept-phone-screen { padding: 23px 12px 12px; }
-    .concept-phone-screen b { margin-bottom: 56px; font-size: .42rem; }
-    .concept-phone-screen small { margin-bottom: 10px; font-size: .4rem; }
-    .concept-phone-screen strong { font-size: .84rem; }
-    .concept-phone-screen i { width: 55px; height: 6px; margin-top: 15px; }
-    .concept-preview-label { bottom: 7px; left: 0; padding: 9px 11px; }
-    .concept-preview-label span { width: 24px; height: 24px; }
-    .button { width: 100%; padding-inline: 16px; }
-    .hero-actions { align-items: stretch; }
-    .hero-actions .text-link { align-self: flex-start; }
-    .process-grid { grid-template-columns: 1fr; gap: 38px; }
-    .process-copy { position: static; }
-    .steps li { grid-template-columns: 50px 1fr; gap: 15px; }
-    .steps li > span { width: 44px; height: 44px; }
-    .delivery-section { padding-bottom: var(--section-space); }
-    .delivery-card { width: 100%; grid-template-columns: 1fr; text-align: center; padding: 48px 25px; }
-    .delivery-copy .eyebrow { justify-content: center; }
-    .pricing-grid { grid-template-columns: 1fr; }
-    .price-card { padding: 38px 26px; }
-    .price-card > p:not(.price-label):not(.price-term):not(.price-reassurance) { min-height: 0; }
-    .final-cta { padding: var(--section-space) 0; }
-    .final-inner .button { max-width: 380px; }
-    .footer-tag { grid-column: auto; }
-    .footer-inner { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 18px; }
-    .mobile-sticky { position: fixed; z-index: 50; left: 0; bottom: 0; display: grid; place-items: center; width: 100%; min-height: 58px; padding: 9px 15px; color: var(--navy-dark); background: var(--copper); text-align: center; text-decoration: none; text-transform: uppercase; font-size: .875rem; font-weight: 700; letter-spacing: .025em; box-shadow: 0 -8px 30px rgba(13,38,57,.18); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { transition-duration: .01ms !important; }
-  }
-</style>
+  <section class="section">
+    <div class="quote-panel">
+      <span class="eyebrow">Ready when you are</span>
+      <blockquote>Professional, discreet waxing in a relaxed, friendly environment.</blockquote>
+      <div class="hero-actions">
+        <a class="button" href={site.bookingUrl} rel="nofollow">Book an appointment</a>
+        <a class="button button-secondary" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</WaxLadyLayout>
