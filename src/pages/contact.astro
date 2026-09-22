@@ -1,0 +1,48 @@
+---
+import WaxLadyLayout from "../layouts/WaxLadyLayout.astro";
+import { site } from "../data/wax-lady-test";
+---
+<WaxLadyLayout title="Contact | Wax Lady" description="Contact Wax Lady in Stowmarket for waxing and massage appointments." active="/contact">
+  <header class="page-hero">
+    <span class="eyebrow">Contact & booking</span>
+    <h1>Ready to book — or want to ask first?</h1>
+    <p>Appointments are by advance booking only. If you're not sure which treatment to choose, call before booking.</p>
+  </header>
+  <section class="page-section">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="eyebrow">Book</span>
+        <h2>Choose your appointment.</h2>
+        <p>Use the existing booking route supplied for this test customer.</p>
+        <a class="button" href={site.bookingUrl} rel="nofollow">Book an appointment</a>
+        <p class="notice">TEST NOTE: the supplied booking URL is a dummy example.com link and is not a live booking system.</p>
+      </div>
+      <div class="contact-card">
+        <span class="eyebrow">Call</span>
+        <h2>Prefer to speak first?</h2>
+        <p><a href={site.phoneHref}>{site.phoneDisplay}</a></p>
+        <p>{site.serviceArea}</p>
+        <p>{site.hours.join(" · ")}</p>
+      </div>
+    </div>
+
+    <div class="contact-card" style="margin-top:2rem">
+      <span class="eyebrow">Enquiry form - test UI only</span>
+      <h2>Send a question.</h2>
+      <form class="form-grid" id="test-enquiry">
+        <label>Name<input name="name" required /></label>
+        <label>Phone or email<input name="contact" required /></label>
+        <label>What would you like to ask?<textarea name="message" required></textarea></label>
+        <button class="button" type="submit">Send test enquiry</button>
+        <p class="notice" id="form-status">This preview does not transmit customer data. Form-processing infrastructure is intentionally not connected in this non-live test.</p>
+      </form>
+    </div>
+  </section>
+  <script>
+    document.getElementById("test-enquiry")?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const status = document.getElementById("form-status");
+      if (status) status.textContent = "Test passed: form UI validated. No data was transmitted.";
+    });
+  </script>
+</WaxLadyLayout>
