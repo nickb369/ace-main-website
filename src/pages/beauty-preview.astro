@@ -23,10 +23,10 @@ const decisionAnswers = [
   ['What does “free” mean?', 'You receive a personalised website direction for your business. There is no payment and no obligation to continue.'],
 ];
 const faqs = [
-  ['I already have Instagram. Why do I need a website?', 'Instagram is a brilliant place to show your work. Your website gives people a professional place to understand the business behind it, find the details they need and take the next step.'],
-  ['I already use a booking system.', 'A.C.E can make the route into your existing supported booking process clearer on your website. Booking / Engage is a separate capability, introduced according to your business and the services it supports.'],
-  ['Do I need to know anything about websites?', 'No. A.C.E guides the process, then handles hosting, security and ongoing website management after launch.'],
-  ['Will you fill every cancellation?', 'No system can promise that. Booking / Engage is designed to create an opportunity: when availability changes, suitable customers already waiting may be offered the appointment.'],
+  ['What happens after I request my free concept?', 'You tell A.C.E about your business and current online presence. That information is used to prepare a tailored homepage direction for you to review before you decide whether to continue.'],
+  ['What does “ready for review within 7 days” mean?', 'Your new website is ready for your review within 7 days once A.C.E has received all required information, content and access.'],
+  ['What is included in the monthly managed service?', 'After launch, the managed service includes website hosting, security and ongoing website management.'],
+  ['Will I still be in control of who books with me?', 'Yes. A.C.E can make the route into your existing booking or enquiry process clearer. It does not change how you decide who you work with.'],
 ];
 ---
 <!doctype html>
@@ -34,7 +34,7 @@ const faqs = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A.C.E Tailored creates and manages tailored websites for independent beauty businesses." />
+    <meta name="description" content="A.C.E Tailored creates and manages tailored websites for owner-led beauty businesses." />
     <meta name="robots" content="index, follow" />
     <title>A.C.E Tailored | Beauty preview V002</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,11 +54,11 @@ const faqs = [
       <section class="hero" id="top">
         <div class="wrap hero-grid">
           <div>
-            <p class="eyebrow light">FOR INDEPENDENT BEAUTY BUSINESSES</p>
+            <p class="eyebrow light">FOR OWNER-LED BEAUTY BUSINESSES</p>
             <h1>Less chasing.<br /><em>More doing what you love.</em></h1>
-            <p class="lead">From booking enquiries and messages to cancellations and rebooking, A.C.E gives your beauty business a clearer online journey — so clients can find their next step without you having to answer every message manually.</p>
+            <p class="lead">A beautiful, clear online home that helps the right clients understand your services, enquire and reach your existing booking route — without you having to answer every message manually.</p>
             <div class="actions"><a class="button" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a></div>
-            <p class="fine">A personalised website direction — not a generic template. No payment. No obligation.</p>
+            <p class="fine">A tailored homepage direction, showing your services, enquiry route and existing booking link — not a generic template. No payment. No obligation.</p>
           </div>
           <div class="hero-visual" aria-label="Illustrative tailored beauty website shown on desktop and mobile">
             <div class="desktop"><div class="browser"><i></i><i></i><i></i></div><div class="site"><b>YOUR BEAUTY<br />BUSINESS</b><small>BEAUTY, YOUR WAY</small><strong>Your work,<br />beautifully presented.</strong><span>Explore treatments</span><div><i></i><i></i><i></i></div></div></div>
@@ -106,7 +106,7 @@ const faqs = [
       <section class="final"><div class="wrap"><p class="eyebrow light">YOUR BUSINESS · YOUR CONCEPT</p><h2>See what your beauty business<br /><em>could look like online.</em></h2><p>No payment. No obligation.</p><a class="button" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a></div></section>
     </main>
     <a class="floating-cta button" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a>
-    <footer><div class="wrap footer"><img src="/images/ace-tailored-logo.png" alt="A.C.E Tailored" /><p>We create and manage tailored websites for independent beauty businesses.</p><p>ATTRACT <i></i> CONVERT <i></i> ENGAGE</p></div><AceLegalFooter /></footer>
+    <footer><div class="wrap footer"><img src="/images/ace-tailored-logo.png" alt="A.C.E Tailored" /><p>We create and manage tailored websites for owner-led beauty businesses.</p><p>ATTRACT <i></i> CONVERT <i></i> ENGAGE</p></div><AceLegalFooter /></footer>
   </body>
 </html>
 
@@ -136,7 +136,7 @@ const faqs = [
   .button .free{font-size:1.18em;font-weight:900;letter-spacing:.11em}
   .floating-cta{position:fixed;right:22px;bottom:22px;z-index:100;display:inline-flex!important;min-height:48px;padding:10px 16px;font-size:.68rem;box-shadow:0 14px 30px rgba(85,42,60,.28)}
   .floating-cta .free{font-size:1.1em}
-  @media(max-width:560px){.nav .button{padding:8px 7px;font-size:.47rem;letter-spacing:.02em}.actions .button,.price-grid .button,.final .button{padding:12px 10px;font-size:.66rem;letter-spacing:.025em}.floating-cta{right:15px;bottom:14px;left:15px;width:auto;font-size:.61rem}footer{padding-bottom:100px}}
+  @media(max-width:560px){.nav{gap:12px}.nav .button{display:block;width:196px;min-height:52px;padding:9px 6px;font-size:.53rem;line-height:1.28;letter-spacing:.02em;white-space:normal}.actions .button,.price-grid .button,.final .button{padding:12px 10px;font-size:.66rem;letter-spacing:.025em}.floating-cta{right:15px;bottom:14px;left:15px;width:auto;font-size:.61rem}footer{padding-bottom:100px}}
   .desktop{background:#fffaf8;box-shadow:0 30px 60px rgba(85,42,60,.23)}
   .site{background:linear-gradient(135deg,#fff7f1 0 48%,#efc5c4 48% 100%);color:var(--dark)}
   .site small,.phone small{color:#a85e72}
