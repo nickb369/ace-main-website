@@ -1,0 +1,3 @@
+# Public snapshots and immutable assets retain exact published bytes.
+public/_astro/** -text
+public/_beauty/** -text

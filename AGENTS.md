@@ -24,14 +24,14 @@ Consult these guides before working on related tasks:
 ## A.C.E Project Rules
 
 - This repository contains SITE-001, the A.C.E Tailored main website.
-- The main page is src/pages/index.astro.
+- The live root rewrites to /beauty-preview/; src/pages/beauty-preview.astro controls it. Preserve the published Beauty visual direction.
 - Preserve the premium, personal and elegant design.
 - Brand colours: cream #f7f1e8, navy #102a3f and copper #c77d57.
 - Headings use Playfair Display. Body and interface text use Montserrat.
 - Use only verified business information. Never invent facts, services, reviews, results or claims.
-- Locked spread price: £72.25 per month for the first 12 months, then £39 per month.
-- Locked upfront price: £399 upfront for website creation, plus £39 per month for hosting and management.
-- Never introduce £74.99 or the phrase “No setup fee”.
+- Current approved A.C.E Complete price: £179/month, 12-month initial commitment (£2,148), first £179 advance funds month one.
+- Historical £399/£39 and £72.25 offers are SUPERSEDED; preserve historical immutable records, never restore them on active sales pages.
+- No upfront website-creation fee. Preserve current legal hashes, non-VAT wording, native Beauty route and human controls.
 - Approved primary CTA: “Get My Free Website Concept”.
 - The seven-working-day promise must state that all required information, content and access must first be received.
 - Keep layouts responsive and accessible.
@@ -40,4 +40,4 @@ Consult these guides before working on related tasks:
 - After code changes, run npm run build and report the result.
 - Report every file changed and summarise the diff.
 - Never commit, push, deploy or delete files unless Nicholas explicitly authorises it.
-- If an instruction conflicts with these locked rules, stop and ask for clarification.
+- Newer explicit commercial/launch approvals override historical rules. Do not change current production activation state through a site rebuild.
