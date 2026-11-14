@@ -1,5 +1,8 @@
 
 .landing-offer-action{margin:1.6rem 0 1.1rem}
+.funnel-video--deferred:before{content:'N';padding-left:0;font:500 1.55rem/1 var(--ace-display)}
+.funnel-video--deferred strong{display:block}
+.funnel-video--deferred p{max-width:590px;margin-inline:auto}
 @font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url('/_beauty/fonts/montserrat-400.ttf') format('truetype')}
 @font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url('/_beauty/fonts/montserrat-500.ttf') format('truetype')}
 @font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url('/_beauty/fonts/montserrat-600.ttf') format('truetype')}
