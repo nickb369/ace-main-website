@@ -2,14 +2,14 @@
 import AceLegalFooter from '../components/AceLegalFooter.astro';
 const conceptUrl = 'https://acetailored.co.uk/acquisition/beauty-paid/';
 const pillars = [
-  ['ATTRACT', '5 core content pieces every week, adapted across Facebook, Instagram, TikTok and Google Business Profile.'],
-  ['CONVERT', 'A premium tailored website, created and managed for your business.'],
-  ['ENGAGE', 'An AI receptionist across your website and phone — answering enquiries, helping customers book and capturing opportunities when you’re busy.'],
+  ['BUILT AROUND YOU', 'A professional website shaped around your business, services and customers.'],
+  ['CLEAR FOR CUSTOMERS', 'Clear information, trust and an obvious next step when someone is ready to enquire.'],
+  ['MANAGED FOR YOU', 'A.C.E builds it, manages it and handles the agreed ongoing service.'],
 ];
 const concerns = [
   ['A client finds you on Instagram', 'They love your work, but still have to search for treatment information, prices, your location and how to book.'],
   ['A DM arrives while you are with a client', 'It waits. So does the next enquiry. You cannot give a treatment and answer every message at the same time.'],
-  ['Tomorrow has a cancellation', 'There may be someone who would take it — but finding them and matching the right appointment is more manual work.'],
+  ['A customer visits while you are busy', 'They need clear answers and an obvious next step without waiting for you to finish an appointment.'],
 ];
 const websiteBenefits = [
   ['Show your work properly', 'A polished digital home that reflects the care you put into every treatment.'],
@@ -20,12 +20,12 @@ const websiteBenefits = [
 const decisionAnswers = [
   ['Already use a booking system?', 'A.C.E can make the route into your existing supported booking process clearer on your website.'],
   ['Too busy to manage a website?', 'A.C.E guides the onboarding, then handles hosting, security and ongoing website management after launch.'],
-  ['What does “free” mean?', 'You receive a personalised website direction for your business. There is no payment and no obligation to continue.'],
+  ['What is a Complimentary Concept?', 'A tailored preview of what your business could look like. It is not a completed free website. There is no payment and no obligation to continue.'],
 ];
 const faqs = [
-  ['What happens after I request my free concept?', 'You tell A.C.E about your business and current online presence. That information is used to prepare a tailored homepage direction for you to review before you decide whether to continue.'],
+  ['What happens after I request my Complimentary Concept?', 'You tell A.C.E about your business and current online presence. A.C.E reviews what you share and creates a tailored website direction for you to consider before deciding whether to continue.'],
   ['What does “ready for review within seven working days” mean?', 'Once A.C.E has received all required information, content and access, the completed website will be ready for review within seven working days.'],
-  ['What is included in A.C.E Complete?', 'Your tailored website, hosting, management and agreed updates; 5 core content pieces per week, adapted across Facebook, Instagram, TikTok and Google Business Profile; and AI Receptionist — website + phone. Includes 150 AI telephone minutes per month. Additional voice usage is 25p/minute. Paid advertising is separate.'],
+  ['What is included in A.C.E Complete?', 'One managed service built around your business: your tailored website, ongoing management and the agreed A.C.E services that help customers understand your business and take the next step.'],
   ['Will I still be in control of who books with me?', 'Yes. A.C.E can make the route into your existing booking or enquiry process clearer. It does not change how you decide who you work with.'],
 ];
 ---
@@ -36,7 +36,7 @@ const faqs = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A.C.E Tailored creates and manages tailored websites for owner-led beauty businesses." />
     <meta name="robots" content="index, follow" />
-    <title>A.C.E Tailored | Websites, content and AI Receptionist</title>
+    <title>A.C.E Tailored | A website built around your business</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -46,8 +46,8 @@ const faqs = [
     <header>
       <div class="wrap nav">
         <a class="brand" href="#top"><img src="/images/ace-tailored-logo.png" alt="A.C.E Tailored — Attract, Convert, Engage" /></a>
-        <nav aria-label="Main navigation"><a href="#website">Website</a><a href="#engage">AI receptionist</a><a href="#how">How it works</a><a href="#pricing">Pricing</a></nav>
-        <a class="button small" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a>
+        <nav aria-label="Main navigation"><a href="#website">Website</a><a href="#engage">Enquiry support</a><a href="#how">How it works</a><a href="#pricing">Pricing</a></nav>
+        <a class="button small" href={conceptUrl}>See my Complimentary Concept</a>
       </div>
     </header>
     <main id="main">
@@ -55,10 +55,10 @@ const faqs = [
         <div class="wrap hero-grid">
           <div>
             <p class="eyebrow light">FOR OWNER-LED BEAUTY BUSINESSES</p>
-            <h1>Less chasing.<br /><em>More doing what you love.</em></h1>
-            <p class="lead">A beautiful, clear online home that helps the right clients understand your services, enquire and reach your existing booking route — without you having to answer every message manually.</p><p class="complete-intro"><strong>A.C.E Complete — £179/month.</strong> Your tailored website, social content and AI Receptionist support across your website and phone, managed together.</p>
-            <div class="actions"><a class="button" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a></div>
-            <p class="fine">A tailored homepage direction, showing your services, enquiry route and existing booking link — not a generic template. No payment. No obligation.</p>
+            <h1>A website built around your business —<br /><em>and managed for you.</em></h1>
+            <p class="lead">See what your business could look like with a Complimentary Concept tailored to you.</p><p class="complete-intro"><strong>A.C.E Complete is £179/month.</strong> We build it, manage it and help your customers take the next step.</p>
+            <div class="actions"><a class="button" href={conceptUrl}>See my Complimentary Concept</a></div>
+            <p class="fine">A tailored preview of what your business could look like — not a complete free website. No payment. No obligation.</p>
           </div>
           <div class="hero-visual" aria-label="Illustrative tailored beauty website shown on desktop and mobile">
             <div class="desktop"><div class="browser"><i></i><i></i><i></i></div><div class="site"><b>YOUR BEAUTY<br />BUSINESS</b><small>BEAUTY, YOUR WAY</small><strong>Your work,<br />beautifully presented.</strong><span>Explore treatments</span><div><i></i><i></i><i></i></div></div></div>
@@ -78,20 +78,18 @@ const faqs = [
       </section>
 
       <section class="section split cream" id="website"><div class="wrap two">
-        <div><p class="eyebrow">THE A.C.E WEBSITE</p><h2>Your work looks beautiful.<br /><em>Your website should too.</em></h2><p class="bodycopy">A.C.E gives your beauty business a professional digital home: somewhere that shows the standard of your work, makes treatment information easier to find and helps the right client feel confident taking the next step.</p><p class="bodycopy">It is not a generic do-it-yourself template. It is tailored around your business, then hosted, secured and managed by A.C.E after launch.</p><a class="button" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a></div>
+        <div><p class="eyebrow">THE A.C.E WEBSITE</p><h2>Get a website that<br /><em>actually works for you.</em></h2><p class="bodycopy">A.C.E gives your beauty business a professional digital home: somewhere that presents your services clearly, builds trust and makes it easier for the right customer to take the next step.</p><p class="bodycopy">It is tailored around your business, then hosted, secured and managed by A.C.E after launch.</p><a class="button" href={conceptUrl}>See my Complimentary Concept</a></div>
         <div class="benefits">{websiteBenefits.map(([title, text]) => <article><b>✦</b><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
       </div></section>
 
       <section class="section contrast"><div class="wrap"><p class="eyebrow light">THE EXPERIENCE YOUR CLIENTS FEEL</p><h2>From scattered information<br /><em>to a clearer path forward.</em></h2><div class="compare"><article><p class="cap">WITHOUT A CLEAR DIGITAL HOME</p><ul><li>Information spread across posts and messages</li><li>Repeated questions about treatments and booking</li><li>Enquiries waiting while you are with clients</li><li>A business that may not look as polished online as it is in person</li></ul></article><article class="after"><p class="cap">WITH A.C.E</p><ul><li>A professional website shaped around your business</li><li>Clear information and next steps for clients</li><li>A more organised path from interest to enquiry or booking</li><li>Ongoing website management, handled for you</li></ul></article></div></div></section>
 
       <section class="section engage" id="engage"><div class="wrap two engage-grid">
-        <div><p class="eyebrow">A.C.E COMPLETE · AI RECEPTIONIST — WEBSITE + PHONE</p><h2>Support around the appointment.<br /><em>Not another system for you to manage.</em></h2><p class="bodycopy">Answers customer questions, handles enquiries, assists with bookings and captures opportunities through your website and by phone.</p><p class="notice">Includes 150 AI telephone minutes per month. Additional voice usage is 25p/minute. Paid advertising is separate.</p></div>
-        <div class="engage-card"><p class="cap">WHAT IT CAN HELP WITH</p><ul><li>Guide treatment enquiries toward the appropriate next step</li><li>Help reduce back-and-forth about appointment availability</li><li>Capture details from clients who want an appointment</li><li>Maintain a waiting list where that is appropriate for the business</li><li>Work around your business’s treatments, opening hours and individual setup</li></ul><p>It is designed to feel like support for your business — not a generic chatbot.</p></div>
+        <div><p class="eyebrow">LET A.C.E HANDLE THE ADMIN</p><h2>Never miss an enquiry<br /><em>while you’re with a client.</em></h2><p class="bodycopy">A.C.E can answer common questions, capture enquiries and help customers take the next step while you stay in control.</p></div>
+        <div class="engage-card"><p class="cap">SIMPLE SUPPORT FOR YOUR BUSINESS</p><ul><li>Answer common questions</li><li>Capture the details you need</li><li>Guide customers towards the agreed next step</li><li>Keep you in control</li></ul><p>It is part of one managed A.C.E service — not another product for you to manage.</p></div>
       </div></section>
 
-      <section class="recovery"><div class="wrap recovery-grid"><div class="circle">↗</div><div><p class="eyebrow light">WHEN AVAILABILITY CHANGES</p><h2>Cancellations happen.<br /><em>Empty appointments do not always have to.</em></h2><p>Where supported and configured, booking assistance can help you handle waiting-list interest when appointment availability changes.</p><p class="fine">That does not guarantee the slot will be filled. It gives the business a more organised chance to recover time that might otherwise remain empty.</p></div></div></section>
-
-      <section class="section pillars"><div class="wrap"><div class="heading narrow"><p class="eyebrow">THE A.C.E SYSTEM</p><h2>Attract. Convert. Engage.</h2><p>A.C.E is a managed digital foundation for the business behind the treatments.</p></div><div class="pillar-grid">{pillars.map(([title, text], i) => <article><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+      <section class="section pillars"><div class="wrap"><div class="heading narrow"><p class="eyebrow">ONE MANAGED SERVICE</p><h2>We build it. We manage it.<br /><em>You run your business.</em></h2><p>You do not need to become a web designer, developer, marketer or software administrator.</p></div><div class="pillar-grid">{pillars.map(([title, text], i) => <article><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
       <section class="section process cream" id="how"><div class="wrap two"><div><p class="eyebrow">SIMPLE FROM START TO FINISH</p><h2>See the direction<br /><em>before you decide.</em></h2><p class="bodycopy">The complimentary concept is the low-pressure first step. It is not a complete free website; it is a personalised direction for your business, so you can decide whether A.C.E feels right.</p></div><ol><li><b>01</b><div><h3>Tell us about your beauty business</h3><p>Share a little about your services and where clients currently find you.</p></div></li><li><b>02</b><div><h3>See your personalised concept</h3><p>Review a tailored direction before making any decision to continue.</p></div></li><li><b>03</b><div><h3>Give us what we need</h3><p>If you continue, A.C.E gathers the required content, information and access through guided onboarding.</p></div></li><li><b>04</b><div><h3>Review your completed website</h3><p>Once A.C.E has received all required information, content and access, the completed website will be ready for review within seven working days.</p></div></li></ol></div></section>
 
@@ -99,13 +97,12 @@ const faqs = [
 
       <section class="section objections"><div class="wrap"><div class="heading centre"><p class="eyebrow">STRAIGHT ANSWERS BEFORE YOU DECIDE</p><h2>Nothing technical.<br /><em>Nothing hidden.</em></h2></div><div class="objection-grid">{decisionAnswers.map(([question, answer]) => <article><h3>{question}</h3><p>{answer}</p></article>)}</div></div></section>
 
-      <section class="section pricing cream" id="pricing"><div class="wrap"><div class="heading centre"><p class="eyebrow">ONE INTEGRATED MANAGED SERVICE</p><h2>A.C.E Complete.<br /><em>One clear monthly price.</em></h2><p>Your website, social content and AI Receptionist support across your website and phone, managed together.</p></div><div class="price-grid complete-price-grid"><article class="featured"><p class="cap">A.C.E COMPLETE</p><h3><small>£</small>179 <em>/ month</em></h3><p>12-month minimum initial commitment (£2,148 total). No upfront website-creation fee.</p><hr /><ul class="complete-inclusions"><li>Tailored website, hosting, management and agreed updates</li><li>5 core content pieces per week, adapted across Facebook, Instagram, TikTok and Google Business Profile.</li><li>AI Receptionist — website + phone</li><li>Includes 150 AI telephone minutes per month. Additional voice usage is 25p/minute.</li></ul><p>After the Initial Term: £179/month on a rolling monthly basis. Paid advertising is separate.</p><p>A.C.E is not VAT registered. No VAT is charged or added to the prices shown.</p><a class="button full" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a></article></div></div></section>
+      <section class="section pricing cream" id="pricing"><div class="wrap"><div class="heading centre"><p class="eyebrow">ONE INTEGRATED MANAGED SERVICE</p><h2>A.C.E Complete.<br /><em>One clear monthly price.</em></h2><p>Your website, ongoing management and agreed A.C.E services handled for you.</p></div><div class="price-grid complete-price-grid"><article class="featured"><p class="cap">A.C.E COMPLETE</p><h3><small>£</small>179 <em>/ month</em></h3><p>£179/month for 12 months. £2,148 initial contractual total. No upfront website-creation fee.</p><hr /><ul class="complete-inclusions"><li>A professional website built around your business</li><li>Clear services, trust and easier customer next steps</li><li>Ongoing management handled by A.C.E</li><li>Agreed content and enquiry support as one managed service</li></ul><p>Includes 150 AI telephone minutes per month. Additional voice usage is 25p/minute. Paid advertising is separate.</p><p>After the initial term: £179/month on a rolling monthly basis, subject to the published notice provisions.</p><p>A.C.E is not VAT registered. No VAT is charged or added to the prices shown.</p><a class="button full" href={conceptUrl}>See my Complimentary Concept</a></article></div></div></section>
 
       <section class="section faq"><div class="wrap"><div class="heading narrow"><p class="eyebrow">QUESTIONS BEAUTY OWNERS OFTEN ASK</p><h2>Clear answers.<br /><em>No technical pressure.</em></h2></div><div class="faq-list">{faqs.map(([question, answer]) => <details><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>
 
-      <section class="final"><div class="wrap"><p class="eyebrow light">YOUR BUSINESS · YOUR CONCEPT</p><h2>See what your beauty business<br /><em>could look like online.</em></h2><p>No payment. No obligation.</p><a class="button" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a></div></section>
+      <section class="final"><div class="wrap"><p class="eyebrow light">YOUR BUSINESS · YOUR CONCEPT</p><h2>See what your business<br /><em>could look like.</em></h2><p>A tailored preview. No payment. No obligation.</p><a class="button" href={conceptUrl}>See my Complimentary Concept</a></div></section>
     </main>
-    <a class="floating-cta button" href={conceptUrl}>Get your&nbsp;<strong class="free">FREE</strong>&nbsp;tailored website concept</a>
     <footer><div class="wrap footer"><img src="/images/ace-tailored-logo.png" alt="A.C.E Tailored" /><div class="footer-intro"><p>Tailored websites for owner-led beauty businesses.</p><p class="footer-tag">ATTRACT <i></i> CONVERT <i></i> ENGAGE</p></div><a class="footer-contact" href="mailto:hello@acetailored.co.uk">hello@acetailored.co.uk</a></div><AceLegalFooter /></footer>
   </body>
 </html>
