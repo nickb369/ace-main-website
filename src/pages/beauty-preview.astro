@@ -103,7 +103,21 @@ const faqs = [
 
       <section class="final"><div class="wrap"><p class="eyebrow light">YOUR BUSINESS · YOUR CONCEPT</p><h2>See what your business<br /><em>could look like.</em></h2><p>A tailored preview. No payment. No obligation.</p><a class="button" href={conceptUrl}>See my Complimentary Concept</a></div></section>
     </main>
+    <section class="measurement" aria-labelledby="measurement-title"><div class="wrap"><h2 id="measurement-title">Help improve the A.C.E enquiry journey</h2><p>Optional measurement records this page, a Complimentary Concept button click and whether the native intake starts or is submitted. It keeps first-touch campaign details, but does not record your questionnaire answers, contact details, payments or advertising profiles.</p><p>It is off unless you choose to allow it. Your choice does not affect access to the enquiry.</p><div class="measurement-actions"><button type="button" data-measurement-allow>Allow optional measurement</button><button type="button" data-measurement-decline>Continue without measurement</button><button type="button" data-measurement-withdraw hidden>Withdraw optional measurement</button></div><p data-measurement-status role="status" aria-live="polite"></p><p><a href="https://acetailored.co.uk/acquisition/privacy/">Read the enquiry privacy notice</a>.</p></div></section>
     <footer><div class="wrap footer"><img src="/images/ace-tailored-logo.png" alt="A.C.E Tailored" /><div class="footer-intro"><p>Tailored websites for owner-led beauty businesses.</p><p class="footer-tag">ATTRACT <i></i> CONVERT <i></i> ENGAGE</p></div><a class="footer-contact" href="mailto:hello@acetailored.co.uk">hello@acetailored.co.uk</a></div><AceLegalFooter /></footer>
+    <script>
+      const endpoint='https://acetailored.co.uk/acquisition/analytics/v1/event',key='ace_phase1_measurement_v001';
+      const status=document.querySelector('[data-measurement-status]'),allow=document.querySelector('[data-measurement-allow]'),decline=document.querySelector('[data-measurement-decline]'),withdraw=document.querySelector('[data-measurement-withdraw]');
+      const links=[...document.querySelectorAll('a[href="https://acetailored.co.uk/acquisition/beauty-paid/"]')];
+      const read=()=>{try{return JSON.parse(sessionStorage.getItem(key)||'null')}catch{return null}},write=value=>sessionStorage.setItem(key,JSON.stringify(value));
+      const attribution=()=>{const q=new URLSearchParams(location.search);return Object.fromEntries(['utm_source','utm_medium','utm_campaign','utm_content','utm_term','campaign_id'].map(k=>[k,q.get(k)]).filter(([,v])=>v))};
+      const decorate=state=>links.forEach(link=>{const u=new URL(link.href);if(state?.handoff_token)u.searchParams.set('ace_measurement',state.handoff_token);else u.searchParams.delete('ace_measurement');link.href=u.toString()});
+      const send=async(event_name,producer_record_id)=>{const current=read();const response=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({consent:true,event_name,producer_record_id,landing_page:location.pathname,...attribution(),...current}),keepalive:event_name==='primary_cta_clicked'});if(!response.ok)throw new Error('MEASUREMENT_UNAVAILABLE');return response.json()};
+      allow?.addEventListener('click',async()=>{allow.disabled=true;decline.disabled=true;try{const data=await send('page_viewed',crypto.randomUUID()),next={anonymous_analytics_id:data.anonymous_analytics_id,handoff_token:data.handoff_token};write(next);decorate(next);withdraw.hidden=false;status.textContent='Optional measurement is on for this browser session.'}catch{status.textContent='Optional measurement could not be enabled. You can continue without it.'}finally{allow.disabled=false;decline.disabled=false}});
+      decline?.addEventListener('click',()=>{sessionStorage.removeItem(key);decorate(null);withdraw.hidden=true;status.textContent='Optional measurement remains off.'});
+      withdraw?.addEventListener('click',async()=>{const current=read();try{if(current){const response=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({event_name:'consent_withdrawn',anonymous_analytics_id:current.anonymous_analytics_id})});if(!response.ok)throw new Error('WITHDRAWAL_UNAVAILABLE')}sessionStorage.removeItem(key);decorate(null);withdraw.hidden=true;status.textContent='Optional measurement has been withdrawn and its optional journey deleted.'}catch{status.textContent='We could not confirm withdrawal. Please try again or contact A.C.E.'}});
+      links.forEach(link=>link.addEventListener('click',()=>{if(read())send('primary_cta_clicked',crypto.randomUUID()).catch(()=>{})}));decorate(read());
+    </script>
   </body>
 </html>
 
@@ -112,6 +126,7 @@ const faqs = [
   /* V003 visual direction: romantic, feminine, premium beauty. */
   :root{--cream:#fff8f3;--paper:#fffaf8;--navy:#563145;--navy2:#7d4a62;--dark:#392435;--copper:#c9828a;--light:#e7b6bd;--muted:#795d69;--line:#ead8d8}
   body{background:var(--paper)}
+  .measurement{padding:55px 0;background:var(--cream);border-top:1px solid var(--line)}.measurement h2{font-size:clamp(1.8rem,3vw,2.5rem)}.measurement p{max-width:850px}.measurement-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}.measurement-actions button{appearance:none;padding:13px 18px;border:2px solid var(--dark);background:transparent;color:var(--dark);font:700 .78rem Montserrat,sans-serif;cursor:pointer}.measurement-actions button:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
   header{background:#956375;border-color:#956375}
   .nav a{color:#fff8f3}
   .nav .brand img{filter:brightness(0) invert(1)}
